@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { Hand } from './components/Hand'
+import { Face } from './components/Face'
 import '@/App.css'
 
 function App() {
@@ -32,7 +33,10 @@ function App() {
   return (
     <>
       <h1>Stopwatch</h1>
-      <Hand count={count} />
+      <div className="case">
+        <Hand count={count} />
+        <Face />
+      </div>
       <div className="card">
         <p>count is {count}</p>
         <button onClick={toggleTimer}>{isRunning ? 'Stop' : 'Start'}</button>

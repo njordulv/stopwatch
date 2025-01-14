@@ -20,12 +20,21 @@
   color: #888;
 }
 
+.case {
+  position: relative;
+  border-radius: 50%;
+  width: 288px;
+  height: 288px;
+  background: #000;
+  margin: 0 auto;
+}
+
 .hand {
   position: absolute;
-  width: 4px;
-  height: 144px;
+  width: 2px;
+  height: 132px;
   background: #333;
-  top: 10px;
+  top: 12px;
   left: 50%;
   transform-origin: 50% 100%;
 }
