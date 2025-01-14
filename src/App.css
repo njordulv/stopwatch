@@ -32,9 +32,9 @@
 .hand {
   position: absolute;
   width: 2px;
-  height: 132px;
+  height: 128px;
   background: #333;
-  top: 12px;
+  top: 16px;
   left: 50%;
   transform-origin: 50% 100%;
 }

@@ -1,15 +1,25 @@
 import { motion } from 'motion/react'
+import { Lines } from './Lines'
 
 export const Face = () => {
-  const secondsLines = 60
-
   const seconds = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: {
       pathLength: 1,
       opacity: 1,
       transition: {
-        duration: 0.5,
+        duration: 0.4,
+      },
+    },
+  }
+
+  const fives = {
+    hidden: { pathLength: 0, opacity: 0 },
+    visible: {
+      pathLength: 1,
+      opacity: 1,
+      transition: {
+        duration: 0.1,
       },
     },
   }
@@ -33,26 +43,8 @@ export const Face = () => {
       variants={face}
     >
       <motion.circle cx="144" cy="144" r="144" fill="white" />
-      {Array.from({ length: secondsLines }).map((_, i) => {
-        const angle = i * 6 * (Math.PI / 180) - Math.PI / 2
-        const x1 = 144 + 138 * Math.cos(angle)
-        const y1 = 144 + 138 * Math.sin(angle)
-        const x2 = 144 + 144 * Math.cos(angle)
-        const y2 = 144 + 144 * Math.sin(angle)
-
-        return (
-          <motion.line
-            key={i}
-            x1={x1}
-            y1={y1}
-            x2={x2}
-            y2={y2}
-            stroke="black"
-            strokeWidth="2"
-            variants={seconds}
-          />
-        )
-      })}
+      <Lines start={144} end={138} total={60} amount={180} variants={seconds} />
+      <Lines start={144} end={130} total={36} amount={36} variants={fives} />
     </motion.svg>
   )
 }
