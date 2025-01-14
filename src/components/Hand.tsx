@@ -1,11 +1,10 @@
 import { motion } from 'motion/react'
-import styles from './ClockHand.module.css'
 
-interface ClockHandProps {
+interface HandProps {
   count: number
 }
 
-export const ClockHand: React.FC<ClockHandProps> = ({ count }) => {
+export const Hand: React.FC<HandProps> = ({ count }) => {
   const rotation = (count % 60) * 6
 
   return (
@@ -16,7 +15,7 @@ export const ClockHand: React.FC<ClockHandProps> = ({ count }) => {
         stiffness: 50,
         damping: 100,
       }}
-      className={styles.hand}
+      className="hand"
     />
   )
 }

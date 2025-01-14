@@ -1,5 +1,5 @@
 import { useState, useEffect, useRef } from 'react'
-import { ClockHand } from './components/ClockHand'
+import { Hand } from './components/Hand'
 import '@/App.css'
 
 function App() {
@@ -32,7 +32,7 @@ function App() {
   return (
     <>
       <h1>Stopwatch</h1>
-      <ClockHand count={count} />
+      <Hand count={count} />
       <div className="card">
         <p>count is {count}</p>
         <button onClick={toggleTimer}>{isRunning ? 'Stop' : 'Start'}</button>
