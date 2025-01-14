@@ -1,0 +1,9 @@
+.hand {
+  position: absolute;
+  width: 4px;
+  height: 144px;
+  background: #333;
+  top: 10px;
+  left: 50%;
+  transform-origin: 50% 100%;
+}
