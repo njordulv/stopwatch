@@ -35,25 +35,26 @@ export const Face = () => {
 
   return (
     <motion.svg
-      width="288"
-      height="288"
-      viewBox="0 0 288 288"
+      width="300"
+      height="300"
+      viewBox="0 0 300 300"
       initial="hidden"
       animate="visible"
       variants={face}
     >
-      <motion.circle cx="144" cy="144" r="144" fill="#333" />
+      <motion.circle cx="150" cy="150" r="150" fill="#141414" />
+      <Lines start={150} end={142} total={240} amount={720} color="#444" />
       <Lines
-        start={144}
-        end={138}
+        start={150}
+        end={136}
         total={60}
         amount={180}
         variants={seconds}
-        color="grey"
+        color="#444"
       />
       <Lines
-        start={144}
-        end={130}
+        start={150}
+        end={136}
         total={36}
         amount={36}
         variants={fives}
