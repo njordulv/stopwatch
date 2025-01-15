@@ -39,8 +39,15 @@ function App() {
         <Face />
       </div>
       <div className="buttons">
-        <button onClick={toggleTimer}>{isRunning ? 'Stop' : 'Start'}</button>
-        <button onClick={reset}>Reset</button>
+        <button onClick={reset} className="default">
+          Reset
+        </button>
+        <button
+          onClick={toggleTimer}
+          className={`${isRunning ? 'warning' : 'primary'}`}
+        >
+          {isRunning ? 'Stop' : 'Start'}
+        </button>
       </div>
     </div>
   )

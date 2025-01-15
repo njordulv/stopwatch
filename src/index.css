@@ -39,26 +39,50 @@ h1 {
 
 .buttons {
   display: flex;
+  justify-content: space-around;
+  width: 100%;
   gap: 1rem;
 }
 
 button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
+  border-radius: 50%;
+  width: 64px;
+  height: 64px;
+  display: flex;
+  justify-content: center;
+  background-color: transparent;
+  align-items: center;
+  border: 0;
+  padding: 5px;
+  font-size: 0.9em;
+  font-weight: 400;
   font-family: inherit;
-  background-color: #1a1a1a;
   cursor: pointer;
-  transition: border-color 0.25s;
+  transition: all 0.3s ease;
 }
+
 button:hover {
-  border-color: #646cff;
+  opacity: 0.85;
 }
+
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: none;
+}
+
+.primary {
+  background-color: rgba(34, 139, 34, 0.4);
+  color: springgreen;
+}
+
+.warning {
+  background-color: rgba(192, 24, 24, 0.6);
+  color: red;
+}
+
+.default {
+  background-color: rgba(255, 255, 255, 0.3);
+  color: white;
 }
 
 @media (prefers-color-scheme: light) {
