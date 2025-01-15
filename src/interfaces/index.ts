@@ -17,3 +17,7 @@ export interface LinesProps {
     }
   }
 }
+
+export interface NumeralProps {
+  numeral: number
+}

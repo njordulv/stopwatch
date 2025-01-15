@@ -1,6 +1,9 @@
 import { useState, useEffect, useRef } from 'react'
+import { motion } from 'motion/react'
 import { Hand } from './components/Hand'
+import { Nums } from './components/Nums'
 import { Face } from './components/Face'
+import { face } from './variants'
 import '@/App.css'
 
 function App() {
@@ -34,10 +37,16 @@ function App() {
   return (
     <div className="wrapper">
       <h1>Stopwatch</h1>
-      <div className="case">
+      <motion.div
+        className="face"
+        initial="hidden"
+        animate="visible"
+        variants={face}
+      >
         <Hand count={count} />
         <Face />
-      </div>
+        <Nums />
+      </motion.div>
       <div className="buttons">
         <button onClick={reset} className="default">
           Reset
