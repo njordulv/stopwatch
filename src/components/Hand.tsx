@@ -1,8 +1,5 @@
 import { motion } from 'motion/react'
-
-interface HandProps {
-  count: number
-}
+import { HandProps } from '../interfaces'
 
 export const Hand: React.FC<HandProps> = ({ count }) => {
   const rotation = (count / 1000) * 6
