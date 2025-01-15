@@ -32,9 +32,33 @@
 .hand {
   position: absolute;
   width: 2px;
-  height: 128px;
-  background: #333;
-  top: 16px;
+  height: 144px;
+  background: orange;
+  top: 0px;
   left: 50%;
   transform-origin: 50% 100%;
+}
+
+.hand:after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #333;
+  border: 2px solid orange;
+  bottom: -5px;
+  left: -4px;
+}
+
+.hand:before {
+  content: '';
+  position: absolute;
+  width: 2px;
+  height: 25px;
+  background: orange;
+  bottom: -25px;
+  left: 50%;
+  top: auto;
+  margin-left: -1px;
 }

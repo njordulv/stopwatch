@@ -6,6 +6,7 @@ interface LinesProps {
   end: number
   total: number
   amount: number
+  color: string
   variants?: {
     hidden: { pathLength: number; opacity: number }
     visible: {
@@ -21,6 +22,7 @@ export const Lines: React.FC<LinesProps> = ({
   end,
   total,
   amount,
+  color,
   variants,
 }) => {
   return (
@@ -39,7 +41,7 @@ export const Lines: React.FC<LinesProps> = ({
             y1={y1}
             x2={x2}
             y2={y2}
-            stroke="black"
+            stroke={color}
             strokeWidth="2"
             variants={variants}
           />

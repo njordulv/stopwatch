@@ -38,12 +38,8 @@ function App() {
         <Face />
       </div>
       <div className="card">
-        <p>count is {count}</p>
         <button onClick={toggleTimer}>{isRunning ? 'Stop' : 'Start'}</button>
         <button onClick={reset}>Reset</button>
-        <p>
-          Edit <code>src/App.tsx</code> and save to test HMR
-        </p>
       </div>
     </>
   )

@@ -3,7 +3,7 @@ import { Lines } from './Lines'
 
 export const Face = () => {
   const seconds = {
-    hidden: { pathLength: 0, opacity: 0 },
+    hidden: { pathLength: 0, opacity: 1 },
     visible: {
       pathLength: 1,
       opacity: 1,
@@ -14,7 +14,7 @@ export const Face = () => {
   }
 
   const fives = {
-    hidden: { pathLength: 0, opacity: 0 },
+    hidden: { pathLength: 0, opacity: 1 },
     visible: {
       pathLength: 1,
       opacity: 1,
@@ -28,7 +28,7 @@ export const Face = () => {
     hidden: {},
     visible: {
       transition: {
-        staggerChildren: 0.05,
+        staggerChildren: 0.01,
       },
     },
   }
@@ -42,9 +42,23 @@ export const Face = () => {
       animate="visible"
       variants={face}
     >
-      <motion.circle cx="144" cy="144" r="144" fill="white" />
-      <Lines start={144} end={138} total={60} amount={180} variants={seconds} />
-      <Lines start={144} end={130} total={36} amount={36} variants={fives} />
+      <motion.circle cx="144" cy="144" r="144" fill="#333" />
+      <Lines
+        start={144}
+        end={138}
+        total={60}
+        amount={180}
+        variants={seconds}
+        color="grey"
+      />
+      <Lines
+        start={144}
+        end={130}
+        total={36}
+        amount={36}
+        variants={fives}
+        color="white"
+      />
     </motion.svg>
   )
 }
