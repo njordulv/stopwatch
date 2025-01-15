@@ -1,4 +1,30 @@
-# React + TypeScript + Vite
+# Stopwatch App
+
+A simple and elegant stopwatch application built with React and Vite. This application allows users to start, stop, and reset a stopwatch, displaying time in milliseconds for precise timing.
+
+## Features
+
+- **Start/Stop Functionality**: Start and stop the stopwatch with a single button click.
+- **Reset Functionality**: Reset the stopwatch to zero.
+- **Smooth Hand Animation**: The stopwatch hand moves smoothly to represent elapsed time.
+- **Numerals Display**: Displays numerals around the watch face, similar to a traditional clock.
+- **Responsive Design**: Works well on various screen sizes.
+
+## Technologies Used
+
+- **React**: A JavaScript library for building user interfaces.
+- **Vite**: A fast build tool that serves your code via native ESM.
+- **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
+- **Framer Motion**: A library for animations in React applications.
+
+## Installation
+
+To run this project locally, follow these steps:
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/stopwatch.git# React + TypeScript + Vite
+   ```
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
