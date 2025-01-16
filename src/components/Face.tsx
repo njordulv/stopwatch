@@ -1,33 +1,32 @@
 import { motion } from 'motion/react'
 import { Lines } from './Lines'
-import { seconds, fives } from '../variants'
+import { FaceProps } from '../interfaces'
 
-export const Face = () => {
+export const Face: React.FC<FaceProps> = ({
+  width = 300,
+  height = 300,
+  radius = 150,
+  lineConfigs = [],
+}) => {
   return (
     <motion.svg
-      className="lines"
-      width="300"
-      height="300"
-      viewBox="0 0 300 300"
+      width={width}
+      height={height}
+      viewBox={`0 0 ${width} ${height}`}
     >
-      <motion.circle cx="150" cy="150" r="150" fill="#141414" />
-      <Lines start={150} end={142} total={240} amount={720} color="#454545" />
-      <Lines
-        start={150}
-        end={136}
-        total={60}
-        amount={180}
-        variants={seconds}
-        color="#454545"
-      />
-      <Lines
-        start={150}
-        end={136}
-        total={36}
-        amount={36}
-        variants={fives}
-        color="white"
-      />
+      <motion.circle cx={radius} cy={radius} r={radius} fill="transparent" />
+      {lineConfigs.map((config, index) => (
+        <Lines
+          key={index}
+          start={config.start}
+          end={config.end}
+          total={config.total}
+          amount={config.amount}
+          color={config.color}
+          strokeWidth={config.strokeWidth}
+          variants={config.variants}
+        />
+      ))}
     </motion.svg>
   )
 }

@@ -1,4 +1,4 @@
-import { motion } from 'motion/react'
+import { motion, Variants } from 'motion/react'
 import { LineProps } from '../interfaces'
 
 export const Lines: React.FC<LineProps> = ({
@@ -7,6 +7,7 @@ export const Lines: React.FC<LineProps> = ({
   total,
   amount,
   color,
+  strokeWidth,
   variants,
 }) => {
   return (
@@ -17,6 +18,7 @@ export const Lines: React.FC<LineProps> = ({
         const y1 = start + end * Math.sin(angle)
         const x2 = start + start * Math.cos(angle)
         const y2 = start + start * Math.sin(angle)
+        const validVariants = variants as unknown as Variants
 
         return (
           <motion.line
@@ -26,8 +28,8 @@ export const Lines: React.FC<LineProps> = ({
             x2={x2}
             y2={y2}
             stroke={color}
-            strokeWidth="2"
-            variants={variants}
+            strokeWidth={strokeWidth}
+            variants={validVariants}
           />
         )
       })}

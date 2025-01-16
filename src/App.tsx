@@ -6,7 +6,7 @@ import { Face } from './components/Face'
 import { Button } from './components/Button'
 import { Timer } from './components/Timer'
 import { Sign } from './components/Sign'
-import { face } from './variants'
+import { face, seconds, fives } from './variants'
 import { config } from './config'
 import '@/App.css'
 
@@ -55,7 +55,39 @@ function App() {
         variants={face}
       >
         <Hand count={count} />
-        <Face />
+        <Face
+          width={300}
+          height={300}
+          radius={150}
+          lineConfigs={[
+            {
+              start: 150,
+              end: 142,
+              total: 240,
+              amount: 720,
+              color: '#454545',
+              strokeWidth: 2,
+            },
+            {
+              start: 150,
+              end: 136,
+              total: 60,
+              amount: 180,
+              color: '#454545',
+              variants: seconds,
+              strokeWidth: 2,
+            },
+            {
+              start: 150,
+              end: 136,
+              total: 36,
+              amount: 36,
+              color: 'white',
+              variants: fives,
+              strokeWidth: 2,
+            },
+          ]}
+        />
         <Nums
           numerals={config.numeralsPrimary}
           radius={118}
@@ -63,15 +95,53 @@ function App() {
           segments={180}
           font={23}
         />
-        <div className="face-inner">
+        <motion.div
+          className="face-inner"
+          initial="hidden"
+          animate="visible"
+          variants={face}
+        >
+          <Face
+            width={80}
+            height={80}
+            radius={40}
+            lineConfigs={[
+              {
+                start: 40,
+                end: 36,
+                total: 60,
+                amount: 180,
+                color: '#454545',
+                strokeWidth: 1,
+              },
+              {
+                start: 40,
+                end: 33,
+                total: 30,
+                amount: 90,
+                color: '#454545',
+                strokeWidth: 1,
+                variants: seconds,
+              },
+              {
+                start: 40,
+                end: 33,
+                total: 6,
+                amount: 18,
+                color: 'white',
+                strokeWidth: 1,
+                variants: fives,
+              },
+            ]}
+          />
           <Nums
             numerals={config.numeralsSecondary}
-            radius={30}
-            center={57}
+            radius={23}
+            center={46}
             segments={90}
-            font={12}
+            font={13}
           />
-        </div>
+        </motion.div>
         <Sign />
         <Timer count={count} />
       </motion.div>
