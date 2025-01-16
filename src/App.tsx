@@ -4,6 +4,7 @@ import { Hand } from './components/Hand'
 import { Nums } from './components/Nums'
 import { Face } from './components/Face'
 import { Button } from './components/Button'
+import { Sign } from './components/Sign'
 import { face } from './variants'
 import '@/App.css'
 
@@ -47,6 +48,7 @@ function App() {
         <Hand count={count} />
         <Face />
         <Nums />
+        <Sign />
       </motion.div>
       <div className="buttons">
         <Button onClick={reset} className="default" text="Reset" />
