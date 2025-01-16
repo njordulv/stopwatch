@@ -58,12 +58,65 @@
 .sign {
   font-family: 'Allison', serif;
   font-weight: 400;
-  font-size: 1rem;
-  color: grey;
+  font-size: 1.1rem;
+  color: darkgrey;
   font-style: normal;
   position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   top: 59%;
-  left: 50%;
-  transform: translate(-50%);
+  left: 0;
+  right: 0;
+  width: max-content;
+  margin: 0 auto;
   text-shadow: 1px 1px 1px black;
+  letter-spacing: 1px;
+}
+
+.timer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  bottom: 73px;
+  left: 0;
+  right: 0;
+  width: max-content;
+  margin: 0 auto;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.timer span {
+  position: relative;
+  width: 18px;
+}
+
+.timer span:nth-child(1):after,
+.timer span:nth-child(2):after {
+  position: absolute;
+  display: inline-block;
+  color: gainsboro;
+}
+
+.timer span:nth-child(1):after {
+  content: ':';
+  right: -7.5px;
+  top: -1px;
+}
+
+.timer span:nth-child(2):after {
+  content: ',';
+  right: -5.5px;
+  top: 0;
+}
+
+.buttons {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  gap: 1rem;
 }

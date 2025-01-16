@@ -4,6 +4,7 @@ import { Hand } from './components/Hand'
 import { Nums } from './components/Nums'
 import { Face } from './components/Face'
 import { Button } from './components/Button'
+import { Timer } from './components/Timer'
 import { Sign } from './components/Sign'
 import { face } from './variants'
 import '@/App.css'
@@ -12,11 +13,16 @@ function App() {
   const [count, setCount] = useState(0)
   const [isRunning, setIsRunning] = useState(false)
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
+  const startTimeRef = useRef<number>(0)
 
   const toggleTimer = () => {
-    setIsRunning((prev) => !prev)
+    if (isRunning) {
+      setIsRunning(false)
+    } else {
+      startTimeRef.current = Date.now() - count
+      setIsRunning(true)
+    }
   }
-
   const reset = () => {
     clearInterval(intervalRef.current!)
     intervalRef.current = null
@@ -27,8 +33,8 @@ function App() {
   useEffect(() => {
     if (isRunning) {
       intervalRef.current = setInterval(() => {
-        setCount((prevCount) => prevCount + 100)
-      }, 100)
+        setCount(Date.now() - startTimeRef.current)
+      }, 10)
     } else if (intervalRef.current) {
       clearInterval(intervalRef.current)
       intervalRef.current = null
@@ -36,6 +42,7 @@ function App() {
 
     return () => clearInterval(intervalRef.current!)
   }, [isRunning])
+
   return (
     <div className="wrapper">
       <h1>Stopwatch</h1>
@@ -49,6 +56,7 @@ function App() {
         <Face />
         <Nums />
         <Sign />
+        <Timer count={count} />
       </motion.div>
       <div className="buttons">
         <Button

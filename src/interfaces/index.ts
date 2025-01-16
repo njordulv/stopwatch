@@ -1,4 +1,4 @@
-export interface HandProps {
+export interface CounterProps {
   count: number
 }
 
