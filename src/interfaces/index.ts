@@ -19,7 +19,11 @@ export interface LineProps {
 }
 
 export interface NumeralProps {
-  numeral: number
+  numerals: number[]
+  radius: number
+  center: number
+  fontSize: number
+  total: number
 }
 
 export interface ButtonProps {

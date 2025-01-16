@@ -7,6 +7,7 @@ import { Button } from './components/Button'
 import { Timer } from './components/Timer'
 import { Sign } from './components/Sign'
 import { face } from './variants'
+import { config } from './config'
 import '@/App.css'
 
 function App() {
@@ -23,6 +24,7 @@ function App() {
       setIsRunning(true)
     }
   }
+
   const reset = () => {
     clearInterval(intervalRef.current!)
     intervalRef.current = null
@@ -54,7 +56,22 @@ function App() {
       >
         <Hand count={count} />
         <Face />
-        <Nums />
+        <Nums
+          numerals={config.numeralsPrimary}
+          radius={118}
+          center={150}
+          fontSize={23}
+          total={180}
+        />
+        <div className="face-inner">
+          <Nums
+            numerals={config.numeralsSecondary}
+            radius={30}
+            center={57}
+            fontSize={12}
+            total={90}
+          />
+        </div>
         <Sign />
         <Timer count={count} />
       </motion.div>
