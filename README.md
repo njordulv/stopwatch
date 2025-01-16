@@ -11,6 +11,8 @@ A simple and elegant stopwatch application built with React and Vite. This appli
 - **Responsive Design**: Works well on various screen sizes.
 - **Millisecond Precision**: The stopwatch increments by milliseconds for accurate timing.
 - **Customizable Appearance**: The stopwatch can be styled with different colors and sizes.
+- **Dynamic Line Configuration**: The stopwatch face can be customized with different line configurations for visual enhancements.
+- **Nested Stopwatch Faces**: Supports inner stopwatch faces with their own configurations.
 
 ## Technologies Used
 
@@ -40,23 +42,6 @@ To run this project locally, follow these steps:
    npm run build
 
 The production-ready files will be in the "build" directory.
-
-## Features
-
-- **Start/Stop Functionality**: Start and stop the stopwatch with a single button click.
-- **Reset Functionality**: Reset the stopwatch to zero.
-- **Smooth Hand Animation**: The stopwatch hand moves smoothly to represent elapsed time.
-- **Numerals Display**: Displays numerals around the watch face, similar to a traditional clock.
-- **Responsive Design**: Works well on various screen sizes.
-- **Millisecond Precision**: The stopwatch increments by milliseconds for accurate timing.
-- **Customizable Appearance**: The stopwatch can be styled with different colors and sizes.
-
-## Technologies Used
-
-- **React**: A JavaScript library for building user interfaces.
-- **Vite**: A fast build tool that serves your code via native ESM.
-- **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
-- **Framer Motion**: A library for animations in React applications.
 
 ## Usage
 
