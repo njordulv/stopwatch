@@ -51,7 +51,12 @@ function App() {
         <Sign />
       </motion.div>
       <div className="buttons">
-        <Button onClick={reset} className="default" text="Reset" />
+        <Button
+          onClick={reset}
+          className="default"
+          text="Reset"
+          disabled={count === 0}
+        />
         <Button
           onClick={toggleTimer}
           text={`${isRunning ? 'Stop' : 'Start'}`}
