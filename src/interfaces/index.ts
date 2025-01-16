@@ -2,7 +2,7 @@ export interface HandProps {
   count: number
 }
 
-export interface LinesProps {
+export interface LineProps {
   start: number
   end: number
   total: number
@@ -20,4 +20,10 @@ export interface LinesProps {
 
 export interface NumeralProps {
   numeral: number
+}
+
+export interface ButtonProps {
+  onClick: () => void
+  className?: string
+  text: string
 }

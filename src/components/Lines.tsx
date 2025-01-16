@@ -1,7 +1,7 @@
 import { motion } from 'motion/react'
-import { LinesProps } from '../interfaces'
+import { LineProps } from '../interfaces'
 
-export const Lines: React.FC<LinesProps> = ({
+export const Lines: React.FC<LineProps> = ({
   start,
   end,
   total,

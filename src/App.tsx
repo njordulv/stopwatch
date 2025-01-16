@@ -3,6 +3,7 @@ import { motion } from 'motion/react'
 import { Hand } from './components/Hand'
 import { Nums } from './components/Nums'
 import { Face } from './components/Face'
+import { Button } from './components/Button'
 import { face } from './variants'
 import '@/App.css'
 
@@ -48,15 +49,12 @@ function App() {
         <Nums />
       </motion.div>
       <div className="buttons">
-        <button onClick={reset} className="default">
-          Reset
-        </button>
-        <button
+        <Button onClick={reset} className="default" text="Reset" />
+        <Button
           onClick={toggleTimer}
+          text={`${isRunning ? 'Stop' : 'Start'}`}
           className={`${isRunning ? 'warning' : 'primary'}`}
-        >
-          {isRunning ? 'Stop' : 'Start'}
-        </button>
+        />
       </div>
     </div>
   )
