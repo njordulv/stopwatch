@@ -22,8 +22,8 @@ export interface NumeralProps {
   numerals: number[]
   radius: number
   center: number
-  fontSize: number
-  total: number
+  segments: number
+  font: number
 }
 
 export interface ButtonProps {

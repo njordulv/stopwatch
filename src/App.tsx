@@ -60,16 +60,16 @@ function App() {
           numerals={config.numeralsPrimary}
           radius={118}
           center={150}
-          fontSize={23}
-          total={180}
+          segments={180}
+          font={23}
         />
         <div className="face-inner">
           <Nums
             numerals={config.numeralsSecondary}
             radius={30}
             center={57}
-            fontSize={12}
-            total={90}
+            segments={90}
+            font={12}
           />
         </div>
         <Sign />

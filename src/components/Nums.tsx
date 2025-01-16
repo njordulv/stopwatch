@@ -6,13 +6,13 @@ export const Nums: React.FC<NumeralProps> = ({
   numerals,
   radius,
   center,
-  fontSize,
-  total,
+  segments,
+  font,
 }) => {
   return (
     <div className="numerals">
       {numerals.map((number, index) => {
-        const angle = (index * 30 * Math.PI) / total - Math.PI / 2
+        const angle = (index * 30 * Math.PI) / segments - Math.PI / 2
         const x = center + radius * Math.cos(angle)
         const y = center + radius * Math.sin(angle)
 
@@ -26,7 +26,7 @@ export const Nums: React.FC<NumeralProps> = ({
             style={{
               left: x,
               top: y,
-              fontSize: fontSize,
+              fontSize: font,
               color: 'white',
               position: 'absolute',
             }}
