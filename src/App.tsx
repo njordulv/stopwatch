@@ -6,7 +6,6 @@ import { Face } from './components/Face'
 import { Button } from './components/Button'
 import { Timer } from './components/Timer'
 import { Sign } from './components/Sign'
-import { face, seconds, fives } from './variants'
 import { config } from './config'
 import '@/App.css'
 
@@ -52,7 +51,7 @@ function App() {
         className="face"
         initial="hidden"
         animate="visible"
-        variants={face}
+        variants={config.face}
       >
         <Hand count={count} />
         <Face
@@ -74,7 +73,7 @@ function App() {
               total: 60,
               amount: 180,
               color: '#454545',
-              variants: seconds,
+              variants: config.seconds,
               strokeWidth: 2,
             },
             {
@@ -83,7 +82,7 @@ function App() {
               total: 36,
               amount: 36,
               color: 'white',
-              variants: fives,
+              variants: config.fives,
               strokeWidth: 2,
             },
           ]}
@@ -99,7 +98,7 @@ function App() {
           className="face-inner"
           initial="hidden"
           animate="visible"
-          variants={face}
+          variants={config.face}
         >
           <Face
             width={80}
@@ -121,7 +120,7 @@ function App() {
                 amount: 90,
                 color: '#454545',
                 strokeWidth: 1,
-                variants: seconds,
+                variants: config.seconds,
               },
               {
                 start: 40,
@@ -130,7 +129,7 @@ function App() {
                 amount: 18,
                 color: 'white',
                 strokeWidth: 1,
-                variants: fives,
+                variants: config.fives,
               },
             ]}
           />

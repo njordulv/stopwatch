@@ -1,5 +1,5 @@
 import { motion } from 'motion/react'
-import { numVariants } from '../variants'
+import { config } from '../config'
 import { NumeralProps } from '../interfaces'
 
 export const Nums: React.FC<NumeralProps> = ({
@@ -21,7 +21,7 @@ export const Nums: React.FC<NumeralProps> = ({
             key={index}
             initial="offscreen"
             animate="onscreen"
-            variants={numVariants}
+            variants={config.numVariants}
             transition={{ duration: 0.2, delay: index * 0.05 }}
             style={{
               left: x,
