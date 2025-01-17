@@ -3,7 +3,6 @@ export interface CounterProps {
 }
 
 export interface HandProps {
-  count: number
   mode: number
   height: number
   width: number
@@ -50,4 +49,11 @@ export interface ButtonProps {
   className?: string
   text: string
   disabled?: boolean
+}
+
+export interface StoreStates {
+  count: number
+  setCount: (count: number) => void
+  isRunning: boolean
+  setRunning: (isRunning: boolean) => void
 }

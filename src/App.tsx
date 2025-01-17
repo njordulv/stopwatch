@@ -1,25 +1,31 @@
-import { useState, useEffect, useRef } from 'react'
+import { useEffect, useRef } from 'react'
 import { motion } from 'motion/react'
 import { FaceOuter } from './components/FaceOuter'
 import { FaceInner } from './components/FaceInner'
 import { Button } from './components/Button'
 import { Timer } from './components/Timer'
 import { Sign } from './components/Sign'
+import { useStore } from './store'
 import { config } from './config'
 import '@/App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
-  const [isRunning, setIsRunning] = useState(false)
+  const { count, setCount, isRunning, setRunning } = useStore()
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
   const startTimeRef = useRef<number>(0)
 
   const toggleTimer = () => {
     if (isRunning) {
-      setIsRunning(false)
+      clearInterval(intervalRef.current!)
+      intervalRef.current = null
+      setCount(Date.now() - startTimeRef.current)
+      setRunning(false)
     } else {
+      setRunning(true)
       startTimeRef.current = Date.now() - count
-      setIsRunning(true)
+      intervalRef.current = setInterval(() => {
+        setCount(Date.now() - startTimeRef.current)
+      }, 10)
     }
   }
 
@@ -27,21 +33,12 @@ function App() {
     clearInterval(intervalRef.current!)
     intervalRef.current = null
     setCount(0)
-    setIsRunning(false)
+    setRunning(false)
   }
 
   useEffect(() => {
-    if (isRunning) {
-      intervalRef.current = setInterval(() => {
-        setCount(Date.now() - startTimeRef.current)
-      }, 10)
-    } else if (intervalRef.current) {
-      clearInterval(intervalRef.current)
-      intervalRef.current = null
-    }
-
     return () => clearInterval(intervalRef.current!)
-  }, [isRunning])
+  }, [])
 
   return (
     <div className="wrapper">
@@ -52,10 +49,10 @@ function App() {
         animate="visible"
         variants={config.face}
       >
-        <FaceOuter count={count} />
-        <FaceInner count={count} />
+        <FaceOuter />
+        <FaceInner />
         <Sign />
-        <Timer count={count} />
+        <Timer />
       </motion.div>
       <motion.div
         className="buttons"

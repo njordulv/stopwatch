@@ -1,7 +1,8 @@
 import { motion } from 'motion/react'
-import { CounterProps } from '../interfaces'
+import { useStore } from '../store'
 
-export const Timer = ({ count }: CounterProps) => {
+export const Timer = () => {
+  const { count } = useStore()
   const minutes = Math.floor(count / 60000)
   const seconds = Math.floor((count % 60000) / 1000)
   const milliseconds = Math.floor((count % 1000) / 10)

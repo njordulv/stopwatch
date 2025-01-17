@@ -3,9 +3,8 @@ import { Hand } from '../components/Hand'
 import { Nums } from '../components/Nums'
 import { Face } from '../components/Face'
 import { config } from '../config'
-import { CounterProps } from '../interfaces'
 
-export const FaceInner = ({ count }: CounterProps) => {
+export const FaceInner = () => {
   return (
     <motion.div
       className="face-inner"
@@ -13,13 +12,7 @@ export const FaceInner = ({ count }: CounterProps) => {
       animate="visible"
       variants={config.face}
     >
-      <Hand
-        count={count}
-        mode={10000}
-        height={40}
-        width={1}
-        className="hand hand-inner"
-      />
+      <Hand mode={30000} height={40} width={1} className="hand hand-inner" />
       <Face
         width={80}
         height={80}

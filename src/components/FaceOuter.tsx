@@ -2,12 +2,11 @@ import { Hand } from '../components/Hand'
 import { Nums } from '../components/Nums'
 import { Face } from '../components/Face'
 import { config } from '../config'
-import { CounterProps } from '../interfaces'
 
-export const FaceOuter = ({ count }: CounterProps) => {
+export const FaceOuter = () => {
   return (
     <>
-      <Hand count={count} mode={1000} height={150} width={2} className="hand" />
+      <Hand mode={1000} height={150} width={2} className="hand" />
       <Face
         width={300}
         height={300}
