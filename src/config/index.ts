@@ -1,4 +1,5 @@
 export const config = {
+  githubLink: 'https://github.com/njordulv/stopwatch',
   numeralsPrimary: [60, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 55],
   numeralsSecondary: [30, 5, 10, 15, 20, 25],
   face: {
@@ -40,5 +41,11 @@ export const config = {
       opacity: 1,
       scale: 1,
     },
+  },
+  transitionLink: {
+    type: 'spring',
+    mass: 0.6,
+    stiffness: 700,
+    damping: 50,
   },
 }

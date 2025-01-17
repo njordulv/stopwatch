@@ -80,7 +80,7 @@
 .sign {
   font-family: 'Allison', serif;
   font-weight: 400;
-  font-size: 1.1rem;
+  font-size: 1.15rem;
   color: darkgrey;
   font-style: normal;
   position: absolute;
@@ -93,7 +93,7 @@
   width: max-content;
   margin: 0 auto;
   text-shadow: 1px 1px 1px black;
-  letter-spacing: 1px;
+  letter-spacing: 1.1px;
 }
 
 .timer {
@@ -102,7 +102,7 @@
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
-  bottom: 73px;
+  bottom: 72px;
   left: 0;
   right: 0;
   width: max-content;
@@ -141,4 +141,10 @@
   justify-content: space-around;
   width: 100%;
   gap: 1rem;
+}
+
+.github-link {
+  position: absolute;
+  bottom: -0.5px;
+  right: 6px;
 }

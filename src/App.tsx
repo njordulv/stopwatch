@@ -5,6 +5,7 @@ import { FaceInner } from './components/FaceInner'
 import { Button } from './components/Button'
 import { Timer } from './components/Timer'
 import { Sign } from './components/Sign'
+import { Link } from './components/Link'
 import { useStore } from './store'
 import { config } from './config'
 import '@/App.css'
@@ -62,8 +63,8 @@ function App() {
       >
         <Button
           onClick={reset}
-          className="default"
           text="Reset"
+          className="default"
           disabled={count === 0}
         />
         <Button
@@ -72,6 +73,13 @@ function App() {
           className={`${isRunning ? 'warning' : 'primary'}`}
         />
       </motion.div>
+      <Link
+        className="github-link"
+        href={config.githubLink}
+        transition={config.transitionLink}
+        target="_blank"
+        rel="noopener noreferrer"
+      />
     </div>
   )
 }

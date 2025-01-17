@@ -57,3 +57,16 @@ export interface StoreStates {
   isRunning: boolean
   setRunning: (isRunning: boolean) => void
 }
+
+export interface LinkProps {
+  className: string
+  href: string
+  transition: {
+    type: string
+    mass: number
+    stiffness: number
+    damping: number
+  }
+  target?: string
+  rel?: string
+}

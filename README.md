@@ -20,6 +20,7 @@ A simple and elegant stopwatch application built with React and Vite. This appli
 - **Vite**: A fast build tool that serves your code via native ESM.
 - **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
 - **Framer Motion**: A library for animations in React applications.
+- **Zustand**: A modern state management library for improved state handling and performance.
 
 ## Installation
 
