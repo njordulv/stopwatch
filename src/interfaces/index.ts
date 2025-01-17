@@ -56,6 +56,8 @@ export interface StoreStates {
   setCount: (count: number) => void
   isRunning: boolean
   setRunning: (isRunning: boolean) => void
+  lap: boolean
+  setLap: (lap: boolean) => void
 }
 
 export interface LinkProps {

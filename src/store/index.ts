@@ -6,4 +6,6 @@ export const useStore = create<StoreStates>((set) => ({
   setCount: (newCount) => set({ count: newCount }),
   isRunning: false,
   setRunning: (isRunning) => set({ isRunning }),
+  lap: false,
+  setLap: (lap) => set({ lap }),
 }))

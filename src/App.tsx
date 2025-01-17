@@ -11,7 +11,7 @@ import { config } from './config'
 import '@/App.css'
 
 function App() {
-  const { count, setCount, isRunning, setRunning } = useStore()
+  const { count, setCount, isRunning, setRunning, lap, setLap } = useStore()
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
   const startTimeRef = useRef<number>(0)
 
@@ -21,20 +21,25 @@ function App() {
       intervalRef.current = null
       setCount(Date.now() - startTimeRef.current)
       setRunning(false)
+      setLap(true)
     } else {
       setRunning(true)
       startTimeRef.current = Date.now() - count
       intervalRef.current = setInterval(() => {
         setCount(Date.now() - startTimeRef.current)
       }, 10)
+      setLap(false)
     }
   }
 
   const reset = () => {
-    clearInterval(intervalRef.current!)
-    intervalRef.current = null
-    setCount(0)
-    setRunning(false)
+    if (lap) {
+      clearInterval(intervalRef.current!)
+      intervalRef.current = null
+      setCount(0)
+      setRunning(false)
+      setLap(false)
+    }
   }
 
   useEffect(() => {
@@ -63,7 +68,7 @@ function App() {
       >
         <Button
           onClick={reset}
-          text="Reset"
+          text={`${lap ? 'Reset' : 'Lap'}`}
           className="default"
           disabled={count === 0}
         />
