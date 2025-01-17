@@ -22,6 +22,7 @@ export const Face: React.FC<FaceProps> = ({
           end={config.end}
           total={config.total}
           amount={config.amount}
+          rad={config.rad}
           color={config.color}
           strokeWidth={config.strokeWidth}
           variants={config.variants}

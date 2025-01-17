@@ -1,8 +1,20 @@
 import { motion } from 'motion/react'
-import { CounterProps } from '../interfaces'
+import { HandProps } from '../interfaces'
 
-export const Hand: React.FC<CounterProps> = ({ count }) => {
-  const rotation = (count / 1000) * 6
+export const Hand: React.FC<HandProps> = ({
+  count,
+  mode,
+  height,
+  width,
+  className,
+}) => {
+  const rotation = (count / mode) * 6
 
-  return <motion.div animate={{ rotate: rotation }} className="hand" />
+  return (
+    <motion.div
+      animate={{ rotate: rotation }}
+      className={className}
+      style={{ height: height, width: width }}
+    />
+  )
 }

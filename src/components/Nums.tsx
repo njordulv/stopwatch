@@ -29,6 +29,7 @@ export const Nums: React.FC<NumeralProps> = ({
               fontSize: font,
               color: 'white',
               position: 'absolute',
+              letterSpacing: 0.8,
             }}
           >
             {number}

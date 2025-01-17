@@ -53,7 +53,13 @@ function App() {
         animate="visible"
         variants={config.face}
       >
-        <Hand count={count} />
+        <Hand
+          count={count}
+          mode={1000}
+          height={150}
+          width={2}
+          className="hand"
+        />
         <Face
           width={300}
           height={300}
@@ -64,6 +70,7 @@ function App() {
               end: 142,
               total: 240,
               amount: 720,
+              rad: 2.009,
               color: '#454545',
               strokeWidth: 2,
             },
@@ -72,6 +79,7 @@ function App() {
               end: 136,
               total: 60,
               amount: 180,
+              rad: 2.009,
               color: '#454545',
               variants: config.seconds,
               strokeWidth: 2,
@@ -81,6 +89,7 @@ function App() {
               end: 136,
               total: 36,
               amount: 36,
+              rad: 2.009,
               color: 'white',
               variants: config.fives,
               strokeWidth: 2,
@@ -100,6 +109,13 @@ function App() {
           animate="visible"
           variants={config.face}
         >
+          <Hand
+            count={count}
+            mode={10000}
+            height={40}
+            width={1}
+            className="hand hand-inner"
+          />
           <Face
             width={80}
             height={80}
@@ -110,6 +126,7 @@ function App() {
                 end: 36,
                 total: 60,
                 amount: 180,
+                rad: 2.01,
                 color: '#454545',
                 strokeWidth: 1,
               },
@@ -118,6 +135,7 @@ function App() {
                 end: 33,
                 total: 30,
                 amount: 90,
+                rad: 2.01,
                 color: '#454545',
                 strokeWidth: 1,
                 variants: config.seconds,
@@ -127,6 +145,7 @@ function App() {
                 end: 33,
                 total: 6,
                 amount: 18,
+                rad: 2.01,
                 color: 'white',
                 strokeWidth: 1,
                 variants: config.fives,

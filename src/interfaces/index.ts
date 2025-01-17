@@ -2,6 +2,14 @@ export interface CounterProps {
   count: number
 }
 
+export interface HandProps {
+  count: number
+  mode: number
+  height: number
+  width: number
+  className: string
+}
+
 export interface VariantsType {
   hidden: { pathLength: number; opacity: number }
   visible: {
@@ -17,6 +25,7 @@ export interface LineProps {
   total: number
   amount: number
   color: string
+  rad: number
   strokeWidth?: number
   variants?: VariantsType
 }
