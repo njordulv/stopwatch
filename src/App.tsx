@@ -1,8 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { motion } from 'motion/react'
-import { Hand } from './components/Hand'
-import { Nums } from './components/Nums'
-import { Face } from './components/Face'
+import { FaceOuter } from './components/FaceOuter'
+import { FaceInner } from './components/FaceInner'
 import { Button } from './components/Button'
 import { Timer } from './components/Timer'
 import { Sign } from './components/Sign'
@@ -53,117 +52,17 @@ function App() {
         animate="visible"
         variants={config.face}
       >
-        <Hand
-          count={count}
-          mode={1000}
-          height={150}
-          width={2}
-          className="hand"
-        />
-        <Face
-          width={300}
-          height={300}
-          radius={150}
-          lineConfigs={[
-            {
-              start: 150,
-              end: 142,
-              total: 240,
-              amount: 720,
-              rad: 2.009,
-              color: '#454545',
-              strokeWidth: 2,
-            },
-            {
-              start: 150,
-              end: 136,
-              total: 60,
-              amount: 180,
-              rad: 2.009,
-              color: '#454545',
-              variants: config.seconds,
-              strokeWidth: 2,
-            },
-            {
-              start: 150,
-              end: 136,
-              total: 36,
-              amount: 36,
-              rad: 2.009,
-              color: 'white',
-              variants: config.fives,
-              strokeWidth: 2,
-            },
-          ]}
-        />
-        <Nums
-          numerals={config.numeralsPrimary}
-          radius={118}
-          center={150}
-          segments={180}
-          font={23}
-        />
-        <motion.div
-          className="face-inner"
-          initial="hidden"
-          animate="visible"
-          variants={config.face}
-        >
-          <Hand
-            count={count}
-            mode={10000}
-            height={40}
-            width={1}
-            className="hand hand-inner"
-          />
-          <Face
-            width={80}
-            height={80}
-            radius={40}
-            lineConfigs={[
-              {
-                start: 40,
-                end: 36,
-                total: 60,
-                amount: 180,
-                rad: 2.01,
-                color: '#454545',
-                strokeWidth: 1,
-              },
-              {
-                start: 40,
-                end: 33,
-                total: 30,
-                amount: 90,
-                rad: 2.01,
-                color: '#454545',
-                strokeWidth: 1,
-                variants: config.seconds,
-              },
-              {
-                start: 40,
-                end: 33,
-                total: 6,
-                amount: 18,
-                rad: 2.01,
-                color: 'white',
-                strokeWidth: 1,
-                variants: config.fives,
-              },
-            ]}
-          />
-          <Nums
-            numerals={config.numeralsSecondary}
-            radius={23}
-            center={46}
-            segments={90}
-            font={13}
-          />
-        </motion.div>
+        <FaceOuter count={count} />
+        <FaceInner count={count} />
         <Sign />
         <Timer count={count} />
       </motion.div>
-      <div className="buttons">
+      <motion.div
+        className="buttons"
+        initial={{ opacity: 0, y: 10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ delay: 0.4 }}
+      >
         <Button
           onClick={reset}
           className="default"
@@ -175,7 +74,7 @@ function App() {
           text={`${isRunning ? 'Stop' : 'Start'}`}
           className={`${isRunning ? 'warning' : 'primary'}`}
         />
-      </div>
+      </motion.div>
     </div>
   )
 }
