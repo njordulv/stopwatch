@@ -13,6 +13,7 @@ A simple and elegant stopwatch application built with React and Vite. This appli
 - **Customizable Appearance**: The stopwatch can be styled with different colors and sizes.
 - **Dynamic Line Configuration**: The stopwatch face can be customized with different line configurations for visual enhancements.
 - **Nested Stopwatch Faces**: Supports inner stopwatch faces with their own configurations.
+- **Lap Timing**: Users can now record lap times and view them in a list format.
 
 ## Technologies Used
 
