@@ -54,6 +54,10 @@ The production-ready files will be in the "build" directory.
 
 Contributions are welcome! If you have suggestions for improvements or features, feel free to open an issue or submit a pull request.
 
+## Screenshot
+
+![Stopwatch Screenshot](./public/screenshot.jpg)
+
 ## License
 
 This project is licensed under the [MIT License](LICENSE).
