@@ -99,44 +99,38 @@
   letter-spacing: 1.1px;
 }
 
-.timer {
+.timer-wrapper {
   position: absolute;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 0.5rem;
-  bottom: 72px;
+  bottom: 74px;
   left: 0;
   right: 0;
   width: max-content;
   margin: 0 auto;
-  color: white;
   font-size: 1.2rem;
-  font-weight: 300;
 }
 
-.timer span {
+.timer-wrapper .timer {
+  gap: 0.1rem;
+  line-height: 20px;
+}
+
+.timer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+}
+
+.timer-wrapper .timer span {
   position: relative;
-  width: 18px;
+  width: 21px;
 }
 
-.timer span:nth-child(1):after,
-.timer span:nth-child(2):after {
-  position: absolute;
-  display: inline-block;
-  color: gainsboro;
-}
-
-.timer span:nth-child(1):after {
-  content: ':';
-  right: -7.5px;
-  top: -1px;
-}
-
-.timer span:nth-child(2):after {
-  content: ',';
-  right: -5.5px;
-  top: 0;
+.timer b {
+  font-style: normal;
+  font-weight: 300;
+  position: relative;
+  bottom: 1px;
 }
 
 .buttons {

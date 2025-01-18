@@ -7,6 +7,7 @@ import { Timer } from './components/Timer'
 import { Sign } from './components/Sign'
 import { Link } from './components/Link'
 import { useStore } from './store'
+import { formatTime } from './utils/formatTime'
 import { config } from './config'
 import '@/App.css'
 
@@ -83,6 +84,14 @@ function App() {
           className={`${isRunning ? 'warning' : 'primary'}`}
         />
       </motion.div>
+      <ul>
+        {laps.map((lap, index) => (
+          <li key={index}>
+            <span>Lap {index + 1}</span>
+            <span>{formatTime(lap)}</span>
+          </li>
+        ))}
+      </ul>
       <Link
         className="github-link"
         href={config.githubLink}
