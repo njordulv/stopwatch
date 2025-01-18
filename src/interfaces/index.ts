@@ -6,6 +6,8 @@ export interface HandProps {
   mode: number
   height: number
   width: number
+  color: string
+  borderColor: string
   className: string
 }
 

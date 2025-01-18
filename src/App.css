@@ -10,7 +10,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1rem;
+  gap: 1.5rem;
 }
 
 .face {
@@ -39,41 +39,44 @@
   top: 0px;
   left: 50%;
   transform-origin: 50% 100%;
-  z-index: 1;
+  z-index: 2;
 }
 
-.hand:after {
-  content: '';
+.hand .hand-center {
   position: absolute;
   width: 5px;
   height: 5px;
   border-radius: 50%;
   background: #141414;
-  border: 2px solid orange;
-  bottom: -4.5px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: inherit;
+  bottom: -6.5px;
   left: -3.5px;
 }
 
-.hand:before {
-  content: '';
+.hand .hand-end {
   position: absolute;
   width: 2px;
-  height: 30px;
-  background: orange;
-  bottom: -30px;
+  height: 28px;
+  bottom: -34px;
   left: 50%;
   top: auto;
   margin-left: -1px;
 }
 
-.hand-inner:after {
-  border: 0;
-  bottom: -2px;
-  left: -2px;
-  background: orange;
+.hand-inner {
+  z-index: 1;
 }
 
-.hand-inner:before {
+.hand-inner .hand-center {
+  width: 0px;
+  height: 0px;
+  bottom: -2px;
+  left: -1.5px;
+}
+
+.hand-inner .hand-end {
   display: none;
 }
 
@@ -138,9 +141,10 @@
 
 .buttons {
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
   gap: 1rem;
+  margin-top: -2rem;
 }
 
 .github-link {

@@ -6,6 +6,7 @@ export const Hand: React.FC<HandProps> = ({
   mode,
   height,
   width,
+  color,
   className,
 }) => {
   const { count } = useStore()
@@ -21,7 +22,25 @@ export const Hand: React.FC<HandProps> = ({
       animate={{ rotate: rotation }}
       transition={transition}
       className={className}
-      style={{ height: height, width: width }}
-    />
+      style={{
+        height: height,
+        width: width,
+        backgroundColor: color,
+      }}
+    >
+      <span
+        className="hand-center"
+        style={{
+          borderColor: color,
+        }}
+      ></span>
+      <span
+        className="hand-end"
+        style={{
+          backgroundColor: color,
+          borderColor: color,
+        }}
+      ></span>
+    </motion.div>
   )
 }

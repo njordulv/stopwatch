@@ -6,7 +6,14 @@ import { config } from '../config'
 export const FaceOuter = () => {
   return (
     <>
-      <Hand mode={1000} height={150} width={2} className="hand" />
+      <Hand
+        mode={1000}
+        height={148}
+        width={2}
+        color="orange"
+        borderColor="orange"
+        className="hand"
+      />
       <Face
         width={300}
         height={300}
@@ -14,7 +21,7 @@ export const FaceOuter = () => {
         lineConfigs={[
           {
             start: 150,
-            end: 142,
+            end: 144,
             total: 240,
             amount: 720,
             rad: 2.009,
@@ -23,7 +30,7 @@ export const FaceOuter = () => {
           },
           {
             start: 150,
-            end: 136,
+            end: 138,
             total: 60,
             amount: 180,
             rad: 2.009,
@@ -33,7 +40,7 @@ export const FaceOuter = () => {
           },
           {
             start: 150,
-            end: 136,
+            end: 138,
             total: 36,
             amount: 36,
             rad: 2.009,

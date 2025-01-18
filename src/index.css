@@ -84,6 +84,26 @@ button:disabled {
 }
 
 .default {
-  background-color: gray;
+  background-color: dimgray;
   color: whitesmoke;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+ul li,
+ol li {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  gap: 0.5rem;
 }

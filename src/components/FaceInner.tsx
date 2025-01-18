@@ -12,7 +12,14 @@ export const FaceInner = () => {
       animate="visible"
       variants={config.face}
     >
-      <Hand mode={30000} height={40} width={1} className="hand hand-inner" />
+      <Hand
+        mode={30000}
+        height={40}
+        width={1}
+        color="orange"
+        borderColor="orange"
+        className="hand hand-inner"
+      />
       <Face
         width={80}
         height={80}

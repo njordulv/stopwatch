@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { motion } from 'motion/react'
 import { FaceOuter } from './components/FaceOuter'
 import { FaceInner } from './components/FaceInner'
@@ -14,6 +14,7 @@ function App() {
   const { count, setCount, isRunning, setRunning, lap, setLap } = useStore()
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
   const startTimeRef = useRef<number>(0)
+  const [laps, setLapse] = useState<number[]>([])
 
   const toggleTimer = () => {
     if (isRunning) {
@@ -39,7 +40,12 @@ function App() {
       setCount(0)
       setRunning(false)
       setLap(false)
+      setLapse([])
     }
+  }
+
+  const toggleLap = () => {
+    setLapse([...laps, count])
   }
 
   useEffect(() => {
@@ -48,7 +54,6 @@ function App() {
 
   return (
     <div className="wrapper">
-      <h1>Stopwatch</h1>
       <motion.div
         className="face"
         initial="hidden"
@@ -67,7 +72,7 @@ function App() {
         transition={{ delay: 0.4 }}
       >
         <Button
-          onClick={reset}
+          onClick={lap ? reset : toggleLap}
           text={`${lap ? 'Reset' : 'Lap'}`}
           className="default"
           disabled={count === 0}
