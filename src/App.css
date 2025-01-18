@@ -141,19 +141,21 @@
   position: relative;
   display: flex;
   gap: 0;
-  flex-direction: column;
+  flex-direction: column-reverse;
   width: 100%;
 }
 
 .lap-list li {
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px dashed rgba(255, 255, 255, 0.1);
   padding: 0.5rem 0;
 }
 
 .lap-list li:first-child {
-  margin-top: 1.5rem;
+  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
 }
 
 .lap-list li:last-child {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  margin-top: 1.5rem;
 }
