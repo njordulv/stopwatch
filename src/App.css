@@ -136,3 +136,24 @@
   bottom: -0.5px;
   right: 6px;
 }
+
+.lap-list {
+  position: relative;
+  display: flex;
+  gap: 0;
+  flex-direction: column;
+  width: 100%;
+}
+
+.lap-list li {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 0.5rem 0;
+}
+
+.lap-list li:first-child {
+  margin-top: 1.5rem;
+}
+
+.lap-list li:last-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}

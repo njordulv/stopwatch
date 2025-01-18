@@ -60,6 +60,8 @@ export interface StoreStates {
   setRunning: (isRunning: boolean) => void
   lap: boolean
   setLap: (lap: boolean) => void
+  laps: number[]
+  setLapse: (laps: number[]) => void
 }
 
 export interface LinkProps {
