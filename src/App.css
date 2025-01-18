@@ -10,7 +10,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 1.5rem;
 }
 
 .face {
@@ -83,14 +82,14 @@
 .sign {
   font-family: 'Allison', serif;
   font-weight: 400;
-  font-size: 1.15rem;
+  font-size: 1.1rem;
   color: darkgrey;
   font-style: normal;
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 59%;
+  top: 60%;
   left: 0;
   right: 0;
   width: max-content;
@@ -101,7 +100,7 @@
 
 .timer-wrapper {
   position: absolute;
-  bottom: 74px;
+  bottom: 70px;
   left: 0;
   right: 0;
   width: max-content;
@@ -111,7 +110,6 @@
 
 .timer-wrapper .timer {
   gap: 0.1rem;
-  line-height: 20px;
 }
 
 .timer {
@@ -121,16 +119,9 @@
   color: white;
 }
 
-.timer-wrapper .timer span {
-  position: relative;
-  width: 21px;
-}
-
 .timer b {
   font-style: normal;
   font-weight: 300;
-  position: relative;
-  bottom: 1px;
 }
 
 .buttons {
@@ -138,7 +129,6 @@
   justify-content: space-between;
   width: 100%;
   gap: 1rem;
-  margin-top: -2rem;
 }
 
 .github-link {

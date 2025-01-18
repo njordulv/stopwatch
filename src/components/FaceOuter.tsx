@@ -52,10 +52,10 @@ export const FaceOuter = () => {
       />
       <Nums
         numerals={config.numeralsPrimary}
-        radius={118}
+        radius={120}
         center={150}
         segments={180}
-        font={23}
+        font={22}
       />
     </>
   )
