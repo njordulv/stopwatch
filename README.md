@@ -14,6 +14,9 @@ A simple and elegant stopwatch application built with React and Vite. This appli
 - **Dynamic Line Configuration**: The stopwatch face can be customized with different line configurations for visual enhancements.
 - **Nested Stopwatch Faces**: Supports inner stopwatch faces with their own configurations.
 - **Lap Timing**: Users can now record lap times and view them in a list format.
+- **Best and Worst Times Indication**: The lap entries visually indicate the best and worst lap times:
+  - **Best Time**: Displayed in **green** to highlight the fastest lap.
+  - **Worst Time**: Displayed in **red** to indicate the slowest lap.
 
 ## Technologies Used
 

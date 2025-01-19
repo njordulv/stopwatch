@@ -78,7 +78,7 @@ button:disabled {
   color: springgreen;
 }
 
-.warning {
+.danger {
   background-color: rgba(192, 24, 24, 0.6);
   color: red;
 }
@@ -86,6 +86,18 @@ button:disabled {
 .default {
   background-color: dimgray;
   color: whitesmoke;
+}
+
+.primary-color {
+  color: springgreen;
+}
+
+.danger-color {
+  color: red;
+}
+
+.default-color {
+  color: white;
 }
 
 ul,

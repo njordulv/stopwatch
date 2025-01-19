@@ -89,7 +89,7 @@ function App() {
         <Button
           onClick={toggleTimer}
           text={`${isRunning ? 'Stop' : 'Start'}`}
-          className={`${isRunning ? 'warning' : 'primary'}`}
+          className={`${isRunning ? 'danger' : 'primary'}`}
         />
       </motion.div>
       <LapList />

@@ -27,7 +27,7 @@
   height: 80px;
   margin: 0 auto;
   top: 50px;
-  left: 1px;
+  left: 0;
   right: 0;
 }
 
@@ -69,10 +69,11 @@
 }
 
 .hand-inner .hand-center {
-  width: 0px;
-  height: 0px;
-  bottom: -2px;
-  left: -1.5px;
+  width: 0;
+  height: 0;
+  border-width: 2.5px;
+  bottom: -3px;
+  left: -1.7px;
 }
 
 .hand-inner .hand-end {
@@ -116,7 +117,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: white;
 }
 
 .timer b {
@@ -142,20 +142,14 @@
   display: flex;
   gap: 0;
   flex-direction: column-reverse;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
   width: 100%;
+  margin-top: 1.5rem;
 }
 
 .lap-list li {
   display: flex;
   justify-content: space-between;
-  border-top: 1px dashed rgba(255, 255, 255, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 0.5rem 0;
-}
-
-.lap-list li:first-child {
-  border-bottom: 1px dashed rgba(255, 255, 255, 0.1);
-}
-
-.lap-list li:last-child {
-  margin-top: 1.5rem;
 }

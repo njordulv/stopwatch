@@ -48,15 +48,9 @@ export const config = {
     stiffness: 700,
     damping: 50,
   },
-  transitionList: {
-    type: 'spring',
-    mass: 2.5,
-    stiffness: 600,
-    damping: 50,
-  },
   lapsVariants: {
     initial: {
-      y: -20,
+      y: -12,
       opacity: 0,
     },
     animate: {

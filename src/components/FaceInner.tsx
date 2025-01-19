@@ -15,7 +15,7 @@ export const FaceInner = () => {
       <Hand
         mode={30000}
         height={40}
-        width={1}
+        width={2}
         color="orange"
         borderColor="orange"
         className="hand hand-inner"
@@ -30,7 +30,7 @@ export const FaceInner = () => {
             end: 36,
             total: 60,
             amount: 180,
-            rad: 2.01,
+            rad: 2,
             color: '#454545',
             strokeWidth: 1,
           },
@@ -39,7 +39,7 @@ export const FaceInner = () => {
             end: 33,
             total: 30,
             amount: 90,
-            rad: 2.01,
+            rad: 2,
             color: '#454545',
             strokeWidth: 1,
             variants: config.seconds,
@@ -49,7 +49,7 @@ export const FaceInner = () => {
             end: 33,
             total: 6,
             amount: 18,
-            rad: 2.01,
+            rad: 2,
             color: 'white',
             strokeWidth: 1,
             variants: config.fives,
