@@ -10,4 +10,14 @@ export const useStore = create<StoreStates>((set) => ({
   setLap: (lap) => set({ lap }),
   laps: [],
   setLapse: (laps) => set({ laps }),
+  lapStart: 0,
+  setLapStart: (timeOrUpdater) =>
+    set((state) => ({
+      lapStart:
+        typeof timeOrUpdater === 'function'
+          ? timeOrUpdater(state.lapStart)
+          : timeOrUpdater,
+    })),
+  lapPauseTime: null,
+  setLapPauseTime: (time: number | null) => set({ lapPauseTime: time }),
 }))

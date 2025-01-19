@@ -38,6 +38,10 @@
   top: 0px;
   left: 50%;
   transform-origin: 50% 100%;
+  z-index: 3;
+}
+
+.hand-lap {
   z-index: 2;
 }
 
@@ -50,7 +54,7 @@
   border-width: 2px;
   border-style: solid;
   border-color: inherit;
-  bottom: -6.5px;
+  bottom: -4.5px;
   left: -3.5px;
 }
 
@@ -58,7 +62,7 @@
   position: absolute;
   width: 2px;
   height: 28px;
-  bottom: -34px;
+  bottom: -32px;
   left: 50%;
   top: auto;
   margin-left: -1px;
@@ -142,14 +146,20 @@
   display: flex;
   gap: 0;
   flex-direction: column-reverse;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
   width: 100%;
-  margin-top: 1.5rem;
 }
 
 .lap-list li {
   display: flex;
   justify-content: space-between;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 0.5rem 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lap-list li:first-child {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.lap-list li:last-child {
+  margin-top: 1.5rem;
 }

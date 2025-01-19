@@ -1,19 +1,41 @@
 import { Hand } from '../components/Hand'
 import { Nums } from '../components/Nums'
 import { Face } from '../components/Face'
+import { useStore } from '../store'
 import { config } from '../config'
 
 export const FaceOuter = () => {
+  const { count, lapStart, lapPauseTime } = useStore()
+  let adjustedLapTime = 0
+
+  if (lapStart) {
+    if (lapPauseTime) {
+      adjustedLapTime = lapPauseTime - lapStart
+    } else {
+      adjustedLapTime = Date.now() - lapStart
+    }
+  }
+
   return (
     <>
       <Hand
-        mode={1000}
+        rotation={(count / 1000) * 6}
         height={148}
         width={2}
         color="orange"
         borderColor="orange"
         className="hand"
       />
+      {lapStart > 0 && (
+        <Hand
+          rotation={(adjustedLapTime / 1000) * 6}
+          height={148}
+          width={2}
+          color="mediumslateblue"
+          borderColor="mediumslateblue"
+          className="hand hand-lap"
+        />
+      )}
       <Face
         width={300}
         height={300}

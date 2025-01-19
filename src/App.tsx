@@ -21,6 +21,9 @@ function App() {
     setLap,
     laps,
     setLapse,
+    lapPauseTime,
+    setLapPauseTime,
+    setLapStart,
   } = useStore()
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
   const startTimeRef = useRef<number>(0)
@@ -32,6 +35,7 @@ function App() {
       setCount(Date.now() - startTimeRef.current)
       setRunning(false)
       setLap(true)
+      setLapPauseTime(Date.now())
     } else {
       setRunning(true)
       startTimeRef.current = Date.now() - count
@@ -39,22 +43,34 @@ function App() {
         setCount(Date.now() - startTimeRef.current)
       }, 10)
       setLap(false)
-    }
-  }
-
-  const reset = () => {
-    if (lap) {
-      clearInterval(intervalRef.current!)
-      intervalRef.current = null
-      setCount(0)
-      setRunning(false)
-      setLap(false)
-      setLapse([])
+      if (lapPauseTime) {
+        const pausedDuration = Date.now() - lapPauseTime
+        setLapStart((prevLapStart) => prevLapStart + pausedDuration)
+      }
+      setLapPauseTime(null)
     }
   }
 
   const toggleLap = () => {
-    setLapse([...laps, count])
+    if (lap) {
+      setLapStart(0)
+      setLapPauseTime(null)
+    } else {
+      setLapse([...laps, count])
+      setLapStart(Date.now())
+      setLapPauseTime(null)
+    }
+  }
+
+  const reset = () => {
+    clearInterval(intervalRef.current!)
+    intervalRef.current = null
+    setCount(0)
+    setRunning(false)
+    setLap(false)
+    setLapse([])
+    setLapStart(0)
+    setLapPauseTime(null)
   }
 
   useEffect(() => {

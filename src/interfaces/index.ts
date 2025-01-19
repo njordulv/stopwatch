@@ -3,7 +3,7 @@ export interface CounterProps {
 }
 
 export interface HandProps {
-  mode: number
+  rotation: number
   height: number
   width: number
   color: string
@@ -62,6 +62,10 @@ export interface StoreStates {
   setLap: (lap: boolean) => void
   laps: number[]
   setLapse: (laps: number[]) => void
+  lapStart: number
+  setLapStart: (timeOrUpdater: number | ((prev: number) => number)) => void
+  lapPauseTime: number | null
+  setLapPauseTime: (time: number | null) => void
 }
 
 export interface LinkProps {

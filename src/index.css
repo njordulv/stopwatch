@@ -55,7 +55,7 @@ button {
   font-weight: 400;
   font-family: inherit;
   cursor: pointer;
-  transition: all 0.25s ease;
+  transition: all 0.2s ease;
 }
 
 button:hover {
@@ -74,13 +74,13 @@ button:disabled {
 }
 
 .primary {
-  background-color: rgba(34, 139, 34, 0.4);
-  color: springgreen;
+  background-color: darkgreen;
+  color: mediumspringgreen;
 }
 
 .danger {
-  background-color: rgba(192, 24, 24, 0.6);
-  color: red;
+  background-color: darkred;
+  color: tomato;
 }
 
 .default {
@@ -89,11 +89,11 @@ button:disabled {
 }
 
 .primary-color {
-  color: springgreen;
+  color: mediumspringgreen;
 }
 
 .danger-color {
-  color: red;
+  color: tomato;
 }
 
 .default-color {

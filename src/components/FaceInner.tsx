@@ -2,9 +2,12 @@ import { motion } from 'motion/react'
 import { Hand } from '../components/Hand'
 import { Nums } from '../components/Nums'
 import { Face } from '../components/Face'
+import { useStore } from '../store'
 import { config } from '../config'
 
 export const FaceInner = () => {
+  const { count } = useStore()
+
   return (
     <motion.div
       className="face-inner"
@@ -13,7 +16,7 @@ export const FaceInner = () => {
       variants={config.face}
     >
       <Hand
-        mode={30000}
+        rotation={(count / 30000) * 6}
         height={40}
         width={2}
         color="orange"
