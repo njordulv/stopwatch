@@ -46,10 +46,16 @@ function App() {
         setCount(Date.now() - startTimeRef.current)
       }, 10)
       setLap(false)
+
       if (lapPauseTime) {
         const pausedDuration = Date.now() - lapPauseTime
-        setLapStart((prevLapStart) => prevLapStart + pausedDuration)
+        setLapStart(
+          (prevLapStart) => prevLapStart + pausedDuration || Date.now()
+        )
+      } else {
+        setLapStart(Date.now())
       }
+
       setLapPauseTime(null)
     }
   }
@@ -59,13 +65,15 @@ function App() {
       setLapStart(0)
       setLapPauseTime(null)
     } else {
-      let lapTime = lapPauseTime
-        ? lapPauseTime - lapStart
-        : Date.now() - lapStart
+      let lapTime
 
-      if (!lapStart || lapTime < 0) {
+      if (!lapStart || lapStart === 0) {
         lapTime = count
+      } else {
+        lapTime = lapPauseTime ? lapPauseTime - lapStart : Date.now() - lapStart
       }
+
+      lapTime = Math.max(0, lapTime)
 
       setLapse([...laps, lapTime])
       setLapStart(Date.now())
