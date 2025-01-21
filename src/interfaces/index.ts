@@ -53,6 +53,19 @@ export interface ButtonProps {
   disabled?: boolean
 }
 
+export interface LinkProps {
+  className: string
+  href: string
+  transition: {
+    type: string
+    mass: number
+    stiffness: number
+    damping: number
+  }
+  target?: string
+  rel?: string
+}
+
 export interface StoreStates {
   count: number
   setCount: (count: number) => void
@@ -66,17 +79,4 @@ export interface StoreStates {
   setLapStart: (timeOrUpdater: number | ((prev: number) => number)) => void
   lapPauseTime: number | null
   setLapPauseTime: (time: number | null) => void
-}
-
-export interface LinkProps {
-  className: string
-  href: string
-  transition: {
-    type: string
-    mass: number
-    stiffness: number
-    damping: number
-  }
-  target?: string
-  rel?: string
 }
