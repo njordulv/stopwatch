@@ -5,7 +5,7 @@ import { useStore } from '../store'
 import { config } from '../config'
 
 export const FaceOuter = () => {
-  const { count, lapStart, lapPauseTime } = useStore()
+  const { count, lapStart, lapPauseTime, showLapArrow } = useStore()
   let adjustedLapTime = 0
 
   if (lapStart) {
@@ -26,7 +26,7 @@ export const FaceOuter = () => {
         borderColor="orange"
         className="hand"
       />
-      {lapStart > 0 && (
+      {showLapArrow && lapStart > 0 && (
         <Hand
           rotation={(adjustedLapTime / 1000) * 6}
           height={150}

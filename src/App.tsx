@@ -26,6 +26,7 @@ function App() {
     setLapStart,
     lapPauseTime,
     setLapPauseTime,
+    setShowLapArrow,
   } = useStore()
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
   const startTimeRef = useRef<number>(0)
@@ -69,6 +70,7 @@ function App() {
       setLapse([...laps, lapTime])
       setLapStart(Date.now())
       setLapPauseTime(null)
+      setShowLapArrow(true)
     }
   }
 
@@ -81,6 +83,7 @@ function App() {
     setLapse([])
     setLapStart(0)
     setLapPauseTime(null)
+    setShowLapArrow(false)
   }
 
   useEffect(() => {

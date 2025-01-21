@@ -5,11 +5,11 @@ export const MetaData: React.FC = () => {
     <>
       <meta
         name="viewport"
-        content={config.viewport.width}
-        initial-scale={config.viewport.initialScale}
-        minimum-scale={config.viewport.minimumScale}
-        viewport-fit={config.viewport.viewportFit}
-        user-scalable={config.viewport.userScalable ? 'no' : 'yes'}
+        content={`width=${config.viewport.width}, initial-scale=${
+          config.viewport.initialScale
+        }, minimum-scale=${config.viewport.minimumScale}, viewport-fit=${
+          config.viewport.viewportFit
+        }, user-scalable=${config.viewport.userScalable ? 'no' : 'yes'}`}
       />
       <meta name="description" content={config.description} />
       <meta name="keywords" content={config.keywords.join(', ')} />

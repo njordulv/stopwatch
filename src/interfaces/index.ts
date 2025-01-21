@@ -79,4 +79,6 @@ export interface StoreStates {
   setLapStart: (timeOrUpdater: number | ((prev: number) => number)) => void
   lapPauseTime: number | null
   setLapPauseTime: (time: number | null) => void
+  showLapArrow: boolean
+  setShowLapArrow: (showLapArrow: boolean) => void
 }

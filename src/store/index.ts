@@ -20,4 +20,6 @@ export const useStore = create<StoreStates>((set) => ({
     })),
   lapPauseTime: null,
   setLapPauseTime: (time: number | null) => set({ lapPauseTime: time }),
+  showLapArrow: false,
+  setShowLapArrow: (showLapArrow: boolean) => set({ showLapArrow }),
 }))
