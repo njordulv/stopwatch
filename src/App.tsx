@@ -21,9 +21,10 @@ function App() {
     setLap,
     laps,
     setLapse,
+    lapStart,
+    setLapStart,
     lapPauseTime,
     setLapPauseTime,
-    setLapStart,
   } = useStore()
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
   const startTimeRef = useRef<number>(0)
@@ -56,7 +57,15 @@ function App() {
       setLapStart(0)
       setLapPauseTime(null)
     } else {
-      setLapse([...laps, count])
+      let lapTime = lapPauseTime
+        ? lapPauseTime - lapStart
+        : Date.now() - lapStart
+
+      if (!lapStart || lapTime < 0) {
+        lapTime = count
+      }
+
+      setLapse([...laps, lapTime])
       setLapStart(Date.now())
       setLapPauseTime(null)
     }

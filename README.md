@@ -17,6 +17,8 @@ A simple and elegant stopwatch application built with React and Vite. This appli
 - **Best and Worst Times Indication**: The lap entries visually indicate the best and worst lap times:
   - **Best Time**: Displayed in **green** to highlight the fastest lap.
   - **Worst Time**: Displayed in **red** to indicate the slowest lap.
+- **First-Class Lap Timing**: Each lap time is precisely recorded at the moment of pressing the lap button, ensuring accurate individual timings.
+- **Dynamic Lap List**: The lap list updates dynamically and is optimized for performance even with a large number of laps.
 
 ## Technologies Used
 
@@ -68,4 +70,5 @@ This project is licensed under the [MIT License](LICENSE).
 
 ## Acknowledgments
 
-Thanks to the creators of React, Vite, and Framer Motion for their amazing tools and libraries.
+This application draws design inspiration from the stopwatch functionality found on Apple devices. While the core concept and layout are similar, the colors, fonts, and element sizes have been customized to provide a unique experience.
+Thanks to the creators of React, Vite, Zustand and Framer Motion for their amazing tools and libraries.

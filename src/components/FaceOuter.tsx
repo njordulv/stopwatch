@@ -20,7 +20,7 @@ export const FaceOuter = () => {
     <>
       <Hand
         rotation={(count / 1000) * 6}
-        height={148}
+        height={150}
         width={2}
         color="orange"
         borderColor="orange"
@@ -29,7 +29,7 @@ export const FaceOuter = () => {
       {lapStart > 0 && (
         <Hand
           rotation={(adjustedLapTime / 1000) * 6}
-          height={148}
+          height={150}
           width={2}
           color="mediumslateblue"
           borderColor="mediumslateblue"
