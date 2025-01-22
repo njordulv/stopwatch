@@ -3,8 +3,8 @@ import { formatTime } from '../utils/formatTime'
 import { useStore } from '../store'
 import { config } from '../config'
 
-export const LapList = () => {
-  const { laps, count } = useStore()
+export const LapList = ({ adjustedLapTime }: { adjustedLapTime: number }) => {
+  const { laps, lapStart, showLapArrow } = useStore()
   const totalLaps = laps.length
   const minLap = totalLaps > 0 ? Math.min(...laps) : 0
   const maxLap = totalLaps > 0 ? Math.max(...laps) : 0
@@ -19,7 +19,7 @@ export const LapList = () => {
     <motion.ul initial="initial" animate="animate" className="lap-list">
       <AnimatePresence>
         {laps.map((lap, index) => {
-          const isCurrentLap = index === laps.length - 1
+          const isCurrentLap = index === laps.length + 1
 
           return (
             <motion.li
@@ -40,7 +40,11 @@ export const LapList = () => {
               }}
             >
               <span>Lap {index + 1}</span>
-              <span>{isCurrentLap ? formatTime(count) : formatTime(lap)}</span>
+              <span>
+                {showLapArrow && lapStart > 0 && isCurrentLap
+                  ? formatTime(adjustedLapTime)
+                  : formatTime(lap)}
+              </span>
             </motion.li>
           )
         })}

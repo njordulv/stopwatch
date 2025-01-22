@@ -30,6 +30,15 @@ function App() {
   } = useStore()
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
   const startTimeRef = useRef<number>(0)
+  let adjustedLapTime = 0
+
+  if (lapStart) {
+    if (lapPauseTime) {
+      adjustedLapTime = lapPauseTime - lapStart
+    } else {
+      adjustedLapTime = Date.now() - lapStart
+    }
+  }
 
   const toggleTimer = () => {
     if (isRunning) {
@@ -108,7 +117,7 @@ function App() {
           animate="visible"
           variants={config.face}
         >
-          <FaceOuter />
+          <FaceOuter adjustedLapTime={adjustedLapTime} />
           <FaceInner />
           <Sign />
           <Timer />
@@ -131,7 +140,7 @@ function App() {
             className={`${isRunning ? 'danger' : 'primary'}`}
           />
         </motion.div>
-        <LapList />
+        <LapList adjustedLapTime={adjustedLapTime} />
         <Link
           className="github-link"
           href={config.githubLink}

@@ -4,17 +4,8 @@ import { Face } from '../components/Face'
 import { useStore } from '../store'
 import { config } from '../config'
 
-export const FaceOuter = () => {
-  const { count, lapStart, lapPauseTime, showLapArrow } = useStore()
-  let adjustedLapTime = 0
-
-  if (lapStart) {
-    if (lapPauseTime) {
-      adjustedLapTime = lapPauseTime - lapStart
-    } else {
-      adjustedLapTime = Date.now() - lapStart
-    }
-  }
+export const FaceOuter = ({ adjustedLapTime }: { adjustedLapTime: number }) => {
+  const { count, lapStart, showLapArrow } = useStore()
 
   return (
     <>
