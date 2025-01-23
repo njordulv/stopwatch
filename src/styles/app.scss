@@ -20,27 +20,27 @@
   width: 19.5rem;
   height: 19.5rem;
   margin: 0 auto;
-}
 
-.face-inner {
-  position: absolute;
-  border-radius: 50%;
-  width: 5.25rem;
-  height: 5.25rem;
-  margin: 0 auto;
-  top: 3.25rem;
-  left: 0;
-  right: 0;
-}
+  &-inner {
+    position: absolute;
+    border-radius: 50%;
+    width: 5.25rem;
+    height: 5.25rem;
+    margin: 0 auto;
+    top: 3.25rem;
+    left: 0;
+    right: 0;
 
-.face-inner .numerals {
-  position: absolute;
-  top: 0.25rem;
-}
+    .numerals {
+      position: absolute;
+      top: 0.25rem;
+    }
 
-.face-inner .numerals span {
-  width: 0.875rem;
-  text-align: right;
+    span {
+      width: 0.875rem;
+      text-align: right;
+    }
+  }
 }
 
 .hand {
@@ -52,48 +52,48 @@
   transform-origin: 50% 100%;
   margin-left: -1px;
   z-index: 3;
-}
 
-.hand-lap {
-  z-index: 2;
-}
+  &-lap {
+    z-index: 2;
+  }
 
-.hand .hand-center {
-  position: absolute;
-  width: 5px;
-  height: 5px;
-  border-radius: 50%;
-  border-width: 2px;
-  border-style: solid;
-  border-color: inherit;
-  bottom: -4.5px;
-  left: -3.5px;
-}
+  &-center {
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    border-width: 2px;
+    border-style: solid;
+    border-color: inherit;
+    bottom: -4.5px;
+    left: -3.5px;
+  }
 
-.hand .hand-end {
-  position: absolute;
-  width: 2px;
-  height: 28px;
-  bottom: -32px;
-  left: 50%;
-  top: auto;
-  margin-left: -1px;
-}
+  &-end {
+    position: absolute;
+    width: 2px;
+    height: 28px;
+    bottom: -32px;
+    left: 50%;
+    top: auto;
+    margin-left: -1px;
+  }
 
-.hand-inner {
-  z-index: 1;
-}
+  &-inner {
+    z-index: 1;
 
-.hand-inner .hand-center {
-  width: 0px;
-  height: 0px;
-  border-width: 3px;
-  bottom: -3px;
-  left: -2px;
-}
+    .hand-center {
+      width: 0px;
+      height: 0px;
+      border-width: 3px;
+      bottom: -3px;
+      left: -2px;
+    }
 
-.hand-inner .hand-end {
-  display: none;
+    .hand-end {
+      display: none;
+    }
+  }
 }
 
 .sign {
@@ -133,11 +133,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-}
 
-.timer b {
-  font-style: normal;
-  font-weight: 300;
+  b {
+    font-style: normal;
+    font-weight: 300;
+  }
 }
 
 .buttons {
@@ -149,7 +149,7 @@
 }
 
 .github-link {
-  position: fixed;
+  position: absolute;
   bottom: 3px;
   right: 8px;
 }
@@ -159,21 +159,21 @@
   display: flex;
   gap: 0;
   flex-direction: column;
-  height: 100%;
   width: calc(100% + 0.625rem);
-  max-height: 10.6rem;
+  height: 100%;
+  max-height: 10.5rem;
   overflow-y: scroll;
-}
 
-.lap-list li {
-  display: flex;
-  justify-content: space-between;
-  padding: 0.5rem 0;
-  margin-left: 0.625rem;
-  margin-right: 0.625rem;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
-}
+  li {
+    display: flex;
+    justify-content: space-between;
+    padding: 0.5rem 0;
+    margin-left: 0.625rem;
+    margin-right: 0.625rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
 
-.lap-list li:last-child {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    &:last-child {
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+  }
 }

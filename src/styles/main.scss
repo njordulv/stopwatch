@@ -23,16 +23,16 @@ a {
   color: darkgray;
   text-decoration: none;
   transition: all 0.3s ease;
-}
 
-a:focus,
-a:visited {
-  outline: none;
-  color: darkgray;
-}
+  &:focus,
+  &:visited {
+    outline: none;
+    color: darkgray;
+  }
 
-a:hover {
-  color: orange;
+  &:hover {
+    color: orange;
+  }
 }
 
 h1 {
@@ -56,21 +56,21 @@ button {
   cursor: pointer;
   opacity: 0.9;
   border: 1px solid #000;
-}
 
-button:hover {
-  opacity: 0.8;
-}
+  &:hover {
+    opacity: 0.8;
+  }
 
-button:focus,
-button:focus-visible {
-  outline: none;
-}
+  &:focus,
+  &:focus-visible {
+    outline: none;
+  }
 
-button:disabled {
-  opacity: 0.5;
-  cursor: default;
-  pointer-events: none;
+  &:disabled {
+    opacity: 0.5;
+    cursor: default;
+    pointer-events: none;
+  }
 }
 
 .primary {

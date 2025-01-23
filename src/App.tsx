@@ -10,7 +10,7 @@ import { LapList } from './components/LapList'
 import { Link } from './components/Link'
 import { useStore } from './store'
 import { config } from './config'
-import '@/App.css'
+import './styles/app.scss'
 
 function App() {
   const {
