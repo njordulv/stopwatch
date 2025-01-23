@@ -3,8 +3,8 @@ import { formatTime } from '../utils/formatTime'
 import { useStore } from '../store'
 import { config } from '../config'
 
-export const LapList = ({ adjustedLapTime }: { adjustedLapTime: number }) => {
-  const { laps, lapStart, showLapArrow } = useStore()
+export const LapList = () => {
+  const { laps, lapStart, showLapArrow, adjustedLapTime } = useStore()
   const totalLaps = laps.length
   const minLap = totalLaps > 0 ? Math.min(...laps) : 0
   const maxLap = totalLaps > 0 ? Math.max(...laps) : 0

@@ -26,7 +26,6 @@ export interface LineProps {
   total: number
   amount: number
   color: string
-  rad: number
   strokeWidth?: number
   variants?: VariantsType
 }
@@ -81,4 +80,6 @@ export interface StoreStates {
   setLapPauseTime: (time: number | null) => void
   showLapArrow: boolean
   setShowLapArrow: (showLapArrow: boolean) => void
+  adjustedLapTime: number
+  updateAdjustedLapTime: () => void
 }

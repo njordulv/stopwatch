@@ -4,8 +4,8 @@ import { Face } from '../components/Face'
 import { useStore } from '../store'
 import { config } from '../config'
 
-export const FaceOuter = ({ adjustedLapTime }: { adjustedLapTime: number }) => {
-  const { count, lapStart, showLapArrow } = useStore()
+export const FaceOuter = () => {
+  const { count, lapStart, showLapArrow, adjustedLapTime } = useStore()
 
   return (
     <>
@@ -37,7 +37,6 @@ export const FaceOuter = ({ adjustedLapTime }: { adjustedLapTime: number }) => {
             end: 144,
             total: 240,
             amount: 720,
-            rad: 2.009,
             color: '#454545',
             strokeWidth: 2,
           },
@@ -46,7 +45,6 @@ export const FaceOuter = ({ adjustedLapTime }: { adjustedLapTime: number }) => {
             end: 138,
             total: 60,
             amount: 180,
-            rad: 2.009,
             color: '#454545',
             variants: config.seconds,
             strokeWidth: 2,
@@ -56,7 +54,6 @@ export const FaceOuter = ({ adjustedLapTime }: { adjustedLapTime: number }) => {
             end: 138,
             total: 36,
             amount: 36,
-            rad: 2.009,
             color: 'white',
             variants: config.fives,
             strokeWidth: 2,

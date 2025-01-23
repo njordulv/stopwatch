@@ -27,23 +27,25 @@ function App() {
     lapPauseTime,
     setLapPauseTime,
     setShowLapArrow,
+    updateAdjustedLapTime,
   } = useStore()
   const intervalRef = useRef<NodeJS.Timeout | null>(null)
+  const animationFrameRef = useRef<number | null>(null)
   const startTimeRef = useRef<number>(0)
-  let adjustedLapTime = 0
 
-  if (lapStart) {
-    if (lapPauseTime) {
-      adjustedLapTime = lapPauseTime - lapStart
-    } else {
-      adjustedLapTime = Date.now() - lapStart
+  const startTimer = () => {
+    const updateCount = () => {
+      setCount(Date.now() - startTimeRef.current)
+      animationFrameRef.current = requestAnimationFrame(updateCount)
     }
+    animationFrameRef.current = requestAnimationFrame(updateCount)
   }
 
   const toggleTimer = () => {
     if (isRunning) {
-      clearInterval(intervalRef.current!)
-      intervalRef.current = null
+      if (animationFrameRef.current) {
+        cancelAnimationFrame(animationFrameRef.current)
+      }
       setCount(Date.now() - startTimeRef.current)
       setRunning(false)
       setLap(true)
@@ -51,16 +53,12 @@ function App() {
     } else {
       setRunning(true)
       startTimeRef.current = Date.now() - count
-      intervalRef.current = setInterval(() => {
-        setCount(Date.now() - startTimeRef.current)
-      }, 10)
+      startTimer()
       setLap(false)
 
       if (lapPauseTime) {
         const pausedDuration = Date.now() - lapPauseTime
-        setLapStart(
-          (prevLapStart) => prevLapStart + pausedDuration || Date.now()
-        )
+        setLapStart((prev) => prev + pausedDuration || Date.now())
       } else {
         setLapStart(Date.now())
       }
@@ -107,6 +105,24 @@ function App() {
     return () => clearInterval(intervalRef.current!)
   }, [])
 
+  useEffect(() => {
+    let animationFrameId: number
+    const updateLapTime = () => {
+      updateAdjustedLapTime()
+      animationFrameId = requestAnimationFrame(updateLapTime)
+    }
+
+    if (isRunning || lap) {
+      updateLapTime()
+    }
+
+    return () => {
+      if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId)
+      }
+    }
+  }, [isRunning, lap, updateAdjustedLapTime])
+
   return (
     <>
       <MetaData />
@@ -117,7 +133,7 @@ function App() {
           animate="visible"
           variants={config.face}
         >
-          <FaceOuter adjustedLapTime={adjustedLapTime} />
+          <FaceOuter />
           <FaceInner />
           <Sign />
           <Timer />
@@ -140,7 +156,7 @@ function App() {
             className={`${isRunning ? 'danger' : 'primary'}`}
           />
         </motion.div>
-        <LapList adjustedLapTime={adjustedLapTime} />
+        <LapList />
         <Link
           className="github-link"
           href={config.githubLink}
