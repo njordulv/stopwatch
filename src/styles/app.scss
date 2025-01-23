@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 7rem);
+  height: calc(100vh - 5rem);
   padding: 2rem 0.625rem;
   gap: 1.5rem;
 }
@@ -145,13 +145,13 @@
   justify-content: space-between;
   width: 100%;
   gap: 1rem;
-  margin-top: -2rem;
+  margin-top: -3rem;
 }
 
 .github-link {
   position: fixed;
   bottom: 3px;
-  right: 8px;
+  right: 7px;
 }
 
 .lap-list {
