@@ -24,13 +24,13 @@ export const Hand: React.FC<HandProps> = ({
       }}
     >
       <span
-        className="hand-center"
+        className="hand__center"
         style={{
           borderColor: color,
         }}
       ></span>
       <span
-        className="hand-end"
+        className="hand__end"
         style={{
           backgroundColor: color,
           borderColor: color,

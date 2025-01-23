@@ -9,6 +9,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  place-items: center;
   height: calc(100vh - 4rem);
   padding: 2rem 0.625rem;
   gap: 1.5rem;
@@ -21,7 +22,7 @@
   height: 19.5rem;
   margin: 0 auto;
 
-  &-inner {
+  &__inner {
     position: absolute;
     border-radius: 50%;
     width: 5.25rem;
@@ -53,11 +54,11 @@
   margin-left: -1px;
   z-index: 3;
 
-  &-lap {
+  &--lap {
     z-index: 2;
   }
 
-  &-center {
+  &__center {
     position: absolute;
     width: 5px;
     height: 5px;
@@ -69,7 +70,7 @@
     left: -3.5px;
   }
 
-  &-end {
+  &__end {
     position: absolute;
     width: 2px;
     height: 28px;
@@ -79,10 +80,10 @@
     margin-left: -1px;
   }
 
-  &-inner {
+  &__inner {
     z-index: 1;
 
-    .hand-center {
+    .hand__center {
       width: 0px;
       height: 0px;
       border-width: 3px;
@@ -90,7 +91,7 @@
       left: -2px;
     }
 
-    .hand-end {
+    .hand__end {
       display: none;
     }
   }
@@ -125,8 +126,10 @@
   bottom: 4.375rem;
 }
 
-.timer-wrapper .timer {
-  gap: 0.1rem;
+.timer-wrapper {
+  .timer {
+    gap: 0.1rem;
+  }
 }
 
 .timer {
@@ -145,35 +148,39 @@
   justify-content: space-between;
   width: 100%;
   gap: 1rem;
-  margin-top: -3rem;
+  margin-top: -2.5rem;
 }
 
 .github-link {
   position: fixed;
-  bottom: 3px;
+  display: flex;
+  bottom: 7px;
   right: 7px;
 }
 
-.lap-list {
+.laps {
   position: relative;
-  display: flex;
-  gap: 0;
-  flex-direction: column;
   width: calc(100% + 0.625rem);
+  overflow-y: scroll;
   height: 100%;
   max-height: 10.5rem;
-  overflow-y: scroll;
 
-  li {
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 0;
+  }
+
+  &__item {
     display: flex;
     justify-content: space-between;
     padding: 0.5rem 0;
     margin-left: 0.625rem;
     margin-right: 0.625rem;
     border-top: 1px solid rgba(255, 255, 255, 0.1);
+  }
 
-    &:last-child {
-      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
+  &__item:last-child {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 }

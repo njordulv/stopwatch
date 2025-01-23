@@ -10,9 +10,9 @@ export const FaceInner = () => {
 
   return (
     <motion.div
-      className="face-inner"
       initial="hidden"
       animate="visible"
+      className="face__inner"
       variants={config.face}
     >
       <Hand
@@ -21,7 +21,7 @@ export const FaceInner = () => {
         width={2}
         color="orange"
         borderColor="orange"
-        className="hand hand-inner"
+        className="hand hand__inner"
       />
       <Face
         width={84}

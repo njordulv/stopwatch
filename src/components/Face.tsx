@@ -9,24 +9,26 @@ export const Face: React.FC<FaceProps> = ({
   lineConfigs = [],
 }) => {
   return (
-    <motion.svg
-      width={width}
-      height={height}
-      viewBox={`0 0 ${width} ${height}`}
-    >
-      <motion.circle cx={radius} cy={radius} r={radius} fill="transparent" />
-      {lineConfigs.map((config, index) => (
-        <Lines
-          key={index}
-          start={config.start}
-          end={config.end}
-          total={config.total}
-          amount={config.amount}
-          color={config.color}
-          strokeWidth={config.strokeWidth}
-          variants={config.variants}
-        />
-      ))}
-    </motion.svg>
+    <div className="face__lines">
+      <motion.svg
+        width={width}
+        height={height}
+        viewBox={`0 0 ${width} ${height}`}
+      >
+        <motion.circle cx={radius} cy={radius} r={radius} fill="transparent" />
+        {lineConfigs.map((config, index) => (
+          <Lines
+            key={index}
+            start={config.start}
+            end={config.end}
+            total={config.total}
+            amount={config.amount}
+            color={config.color}
+            strokeWidth={config.strokeWidth}
+            variants={config.variants}
+          />
+        ))}
+      </motion.svg>
+    </div>
   )
 }

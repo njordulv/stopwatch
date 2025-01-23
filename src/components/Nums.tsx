@@ -21,6 +21,7 @@ export const Nums: React.FC<NumeralProps> = ({
             key={index}
             initial="offscreen"
             animate="onscreen"
+            className="numerals__number"
             variants={config.numVariants}
             transition={{ duration: 0.2, delay: index * 0.05 }}
             style={{

@@ -24,7 +24,7 @@ export const FaceOuter = () => {
           width={2}
           color="mediumslateblue"
           borderColor="mediumslateblue"
-          className="hand hand-lap"
+          className="hand hand--lap"
         />
       )}
       <Face
