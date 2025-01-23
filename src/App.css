@@ -137,30 +137,33 @@
 }
 
 .github-link {
-  position: absolute;
+  position: fixed;
   bottom: -0.5px;
-  right: 6px;
+  right: 8px;
 }
 
 .lap-list {
   position: relative;
   display: flex;
   gap: 0;
-  flex-direction: column-reverse;
-  width: 100%;
+  flex-direction: column;
+  width: calc(100% + 10px);
+  height: 100%;
+  max-height: 207px;
+  margin-top: 1.5rem;
+  overflow-y: scroll;
+  transition: height 0.3s ease;
 }
 
 .lap-list li {
   display: flex;
   justify-content: space-between;
   padding: 0.5rem 0;
+  margin-left: 10px;
+  margin-right: 10px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-.lap-list li:first-child {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
 .lap-list li:last-child {
-  margin-top: 1.5rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
