@@ -3,9 +3,9 @@ import { Lines } from './Lines'
 import { FaceProps } from '../interfaces'
 
 export const Face: React.FC<FaceProps> = ({
-  width = 300,
-  height = 300,
-  radius = 150,
+  width = 312,
+  height = 312,
+  radius = 156,
   lineConfigs = [],
 }) => {
   return (

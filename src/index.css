@@ -3,7 +3,7 @@
   line-height: 1.5;
   font-weight: 400;
   color: whitesmoke;
-  background-color: #121212;
+  background-color: #010101;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -43,22 +43,23 @@ h1 {
 
 button {
   border-radius: 50%;
-  width: 64px;
-  height: 64px;
+  width: 74px;
+  height: 74px;
   display: flex;
   justify-content: center;
   background-color: transparent;
   align-items: center;
   border: 0;
-  padding: 5px;
   font-size: 1em;
   font-weight: 400;
   font-family: inherit;
   cursor: pointer;
+  opacity: 0.9;
+  border: 1px solid #000;
 }
 
 button:hover {
-  opacity: 0.85;
+  opacity: 0.8;
 }
 
 button:focus,

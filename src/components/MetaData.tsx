@@ -11,6 +11,7 @@ export const MetaData: React.FC = () => {
           config.viewport.viewportFit
         }, user-scalable=${config.viewport.userScalable ? 'no' : 'yes'}`}
       />
+      <title>{config.title}</title>
       <meta name="description" content={config.description} />
       <meta name="keywords" content={config.keywords.join(', ')} />
       <meta name="author" content={config.author} />
@@ -51,11 +52,6 @@ export const MetaData: React.FC = () => {
         href="https://fonts.googleapis.com/css2?family=Allison&family=Titillium+Web:wght@300;400&display=swap"
         rel="stylesheet"
       />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Allison&family=Titillium+Web:wght@300;400&display=swap"
-        rel="stylesheet"
-      />
-      <title>{config.title}</title>
     </>
   )
 }

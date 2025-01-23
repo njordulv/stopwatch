@@ -30,7 +30,7 @@ export const LapList = () => {
               className={getLapClass(lap)}
               exit={{
                 opacity: 0,
-                y: -30,
+                y: -50,
                 scale: 0.95,
                 transition: {
                   type: 'spring',

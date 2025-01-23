@@ -17,28 +17,28 @@ export const FaceInner = () => {
     >
       <Hand
         rotation={(count / 30000) * 6}
-        height={40}
+        height={42}
         width={2}
         color="orange"
         borderColor="orange"
         className="hand hand-inner"
       />
       <Face
-        width={80}
-        height={80}
-        radius={40}
+        width={84}
+        height={84}
+        radius={42}
         lineConfigs={[
           {
-            start: 40,
-            end: 36,
+            start: 42,
+            end: 38,
             total: 60,
             amount: 180,
             color: '#454545',
             strokeWidth: 1,
           },
           {
-            start: 40,
-            end: 33,
+            start: 42,
+            end: 34,
             total: 30,
             amount: 90,
             color: '#454545',
@@ -46,8 +46,8 @@ export const FaceInner = () => {
             variants: config.seconds,
           },
           {
-            start: 40,
-            end: 33,
+            start: 42,
+            end: 34,
             total: 6,
             amount: 18,
             color: 'white',
@@ -58,7 +58,7 @@ export const FaceInner = () => {
       />
       <Nums
         numerals={config.numeralsSecondary}
-        radius={23}
+        radius={22}
         center={46}
         segments={90}
         font={13}

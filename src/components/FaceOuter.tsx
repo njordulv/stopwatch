@@ -11,7 +11,7 @@ export const FaceOuter = () => {
     <>
       <Hand
         rotation={(count / 1000) * 6}
-        height={150}
+        height={156}
         width={2}
         color="orange"
         borderColor="orange"
@@ -20,7 +20,7 @@ export const FaceOuter = () => {
       {showLapArrow && lapStart > 0 && (
         <Hand
           rotation={(adjustedLapTime / 1000) * 6}
-          height={150}
+          height={156}
           width={2}
           color="mediumslateblue"
           borderColor="mediumslateblue"
@@ -28,21 +28,21 @@ export const FaceOuter = () => {
         />
       )}
       <Face
-        width={300}
-        height={300}
-        radius={150}
+        width={312}
+        height={312}
+        radius={156}
         lineConfigs={[
           {
-            start: 150,
-            end: 144,
+            start: 156,
+            end: 150,
             total: 240,
             amount: 720,
             color: '#454545',
             strokeWidth: 2,
           },
           {
-            start: 150,
-            end: 138,
+            start: 156,
+            end: 144,
             total: 60,
             amount: 180,
             color: '#454545',
@@ -50,8 +50,8 @@ export const FaceOuter = () => {
             strokeWidth: 2,
           },
           {
-            start: 150,
-            end: 138,
+            start: 156,
+            end: 144,
             total: 36,
             amount: 36,
             color: 'white',
@@ -62,10 +62,10 @@ export const FaceOuter = () => {
       />
       <Nums
         numerals={config.numeralsPrimary}
-        radius={120}
-        center={150}
+        radius={124}
+        center={156}
         segments={180}
-        font={22}
+        font={24}
       />
     </>
   )
