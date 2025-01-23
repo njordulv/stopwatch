@@ -9,7 +9,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: calc(100vh - 4rem);
+  height: calc(100vh - 7rem);
   padding: 2rem 0.625rem;
   gap: 1.5rem;
 }
@@ -149,7 +149,7 @@
 }
 
 .github-link {
-  position: absolute;
+  position: fixed;
   bottom: 3px;
   right: 8px;
 }
