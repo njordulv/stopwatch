@@ -1,8 +1,8 @@
-import { Hand } from '../components/Hand'
-import { Nums } from '../components/Nums'
-import { Face } from '../components/Face'
-import { useStore } from '../store'
-import { config } from '../config'
+import { Hand } from '@/components/Hand'
+import { Nums } from '@/components/Nums'
+import { Face } from '@/components/Face'
+import { useStore } from '@/store'
+import { config } from '@/config'
 
 export const FaceOuter = () => {
   const { count, lapStart, showLapArrow, adjustedLapTime } = useStore()

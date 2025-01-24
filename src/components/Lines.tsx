@@ -1,5 +1,5 @@
 import { motion, Variants } from 'motion/react'
-import { LineProps } from '../interfaces'
+import { LineProps } from '@/interfaces'
 
 export const Lines: React.FC<LineProps> = ({
   start,

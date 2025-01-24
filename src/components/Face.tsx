@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
-import { Lines } from './Lines'
-import { FaceProps } from '../interfaces'
+import { Lines } from '@/components/Lines'
+import { FaceProps } from '@/interfaces'
 
 export const Face: React.FC<FaceProps> = ({
   width = 312,

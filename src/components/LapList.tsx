@@ -1,8 +1,8 @@
 import { motion, AnimatePresence } from 'motion/react'
-import { formatTime } from '../utils/formatTime'
-import { getLapClass } from '../utils/getLapClass'
-import { useStore } from '../store'
-import { config } from '../config'
+import { formatTime } from '@/utils/formatTime'
+import { getLapClass } from '@/utils/getLapClass'
+import { useStore } from '@/store'
+import { config } from '@/config'
 
 export const LapList = () => {
   const { count, laps, lapStart, showLapArrow, adjustedLapTime } = useStore()

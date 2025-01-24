@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
-import { formatTime } from '../utils/formatTime'
-import { useStore } from '../store'
+import { formatTime } from '@/utils/formatTime'
+import { useStore } from '@/store'
 
 export const Timer = () => {
   const { count } = useStore()

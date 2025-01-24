@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
 import { SiGithub } from 'react-icons/si'
-import { LinkProps } from '../interfaces'
+import { LinkProps } from '@/interfaces'
 
 export const Link: React.FC<LinkProps> = ({
   className,

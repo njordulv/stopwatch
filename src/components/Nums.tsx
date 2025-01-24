@@ -1,6 +1,6 @@
 import { motion } from 'motion/react'
-import { config } from '../config'
-import { NumeralProps } from '../interfaces'
+import { config } from '@/config'
+import { NumeralProps } from '@/interfaces'
 
 export const Nums: React.FC<NumeralProps> = ({
   numerals,

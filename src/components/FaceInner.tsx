@@ -1,9 +1,9 @@
 import { motion } from 'motion/react'
-import { Hand } from '../components/Hand'
-import { Nums } from '../components/Nums'
-import { Face } from '../components/Face'
-import { useStore } from '../store'
-import { config } from '../config'
+import { Hand } from '@/components/Hand'
+import { Nums } from '@/components/Nums'
+import { Face } from '@/components/Face'
+import { useStore } from '@/store'
+import { config } from '@/config'
 
 export const FaceInner = () => {
   const { count } = useStore()

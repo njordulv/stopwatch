@@ -1,5 +1,5 @@
 import { create } from 'zustand'
-import { StoreStates } from '../interfaces'
+import { StoreStates } from '@/interfaces'
 
 export const useStore = create<StoreStates>((set, get) => ({
   count: 0,

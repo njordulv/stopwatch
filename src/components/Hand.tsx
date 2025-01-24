@@ -1,5 +1,5 @@
 import { motion } from 'motion/react'
-import { HandProps } from '../interfaces'
+import { HandProps } from '@/interfaces'
 
 export const Hand: React.FC<HandProps> = ({
   rotation,
