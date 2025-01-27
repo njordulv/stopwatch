@@ -2,7 +2,7 @@
   font-family: 'Titillium Web', serif;
   line-height: 1.5;
   font-weight: 400;
-  color: whitesmoke;
+  color: floralwhite;
   background-color: #010101;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -16,18 +16,20 @@ body {
   place-items: start;
   min-width: 320px;
   min-height: 100vh;
+  scrollbar-color: #333 transparent;
+  scrollbar-width: thin;
 }
 
 a {
   font-weight: 400;
-  color: darkgray;
+  color: antiquewhite;
   text-decoration: none;
   transition: all 0.3s ease;
 
   &:focus,
   &:visited {
     outline: none;
-    color: darkgray;
+    color: antiquewhite;
   }
 
   &:hover {
@@ -85,7 +87,7 @@ button {
 
 .default {
   background-color: rgb(88, 87, 87);
-  color: whitesmoke;
+  color: floralwhite;
 }
 
 .primary-color {
@@ -97,7 +99,7 @@ button {
 }
 
 .default-color {
-  color: white;
+  color: floralwhite;
 }
 
 ul,

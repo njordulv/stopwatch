@@ -23,7 +23,7 @@ export const LapList = () => {
             return (
               count > 0 && (
                 <motion.li
-                  key={`lap-${index}`}
+                  key={`lap-${originalIndex}`}
                   variants={config.lapsVariants}
                   className={`laps__item ${getLapClass(
                     lap,
