@@ -28,7 +28,7 @@ export const Nums: React.FC<NumeralProps> = ({
               left: x,
               top: y,
               fontSize: font,
-              color: 'white',
+              color: 'whitesmoke',
               position: 'absolute',
             }}
           >

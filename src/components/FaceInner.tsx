@@ -48,7 +48,7 @@ export const FaceInner = () => {
             end: 34,
             total: 6,
             amount: 18,
-            color: 'white',
+            color: 'antiquewhite',
             strokeWidth: 1,
             variants: config.fives,
           },

@@ -49,7 +49,7 @@ export const MetaData: React.FC = () => {
         crossOrigin="anonymous"
       />
       <link
-        href="https://fonts.googleapis.com/css2?family=Allison&family=Titillium+Web:wght@300;400&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400&display=swap"
         rel="stylesheet"
       />
     </>

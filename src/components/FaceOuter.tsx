@@ -52,7 +52,7 @@ export const FaceOuter = () => {
             end: 144,
             total: 36,
             amount: 36,
-            color: 'white',
+            color: 'antiquewhite',
             variants: config.fives,
             strokeWidth: 2,
           },

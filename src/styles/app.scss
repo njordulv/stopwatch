@@ -99,22 +99,19 @@
 }
 
 .sign {
-  font-family: 'Allison', serif;
-  font-weight: 400;
-  font-size: 1.1rem;
-  letter-spacing: 0.06875rem;
-  color: darkgrey;
-  font-style: normal;
   position: absolute;
   display: flex;
   align-items: center;
   justify-content: center;
-  top: 60%;
+  bottom: 6.2rem;
   left: 0;
   right: 0;
   width: max-content;
   margin: 0 auto;
-  text-shadow: 1px 1px 1px black;
+
+  svg {
+    fill: dimgray;
+  }
 }
 
 .timer-wrapper {
