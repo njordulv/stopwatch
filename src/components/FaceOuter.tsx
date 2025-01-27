@@ -1,6 +1,4 @@
-import { Hand } from '@/components/Hand'
-import { Nums } from '@/components/Nums'
-import { Face } from '@/components/Face'
+import { Hand, Nums, Face } from '@/components'
 import { useStore } from '@/store'
 import { config } from '@/config'
 

@@ -1,13 +1,15 @@
 import { useEffect, useRef } from 'react'
 import { motion } from 'motion/react'
-import { MetaData } from '@/components/MetaData'
-import { FaceOuter } from '@/components/FaceOuter'
-import { FaceInner } from '@/components/FaceInner'
-import { Sign } from '@/components/Sign'
-import { Timer } from '@/components/Timer'
-import { Button } from '@/components/Button'
-import { LapList } from '@/components/LapList'
-import { Link } from '@/components/Link'
+import {
+  MetaData,
+  FaceOuter,
+  FaceInner,
+  Sign,
+  Timer,
+  Button,
+  LapList,
+  Link,
+} from '@/components'
 import { useStore } from '@/store'
 import { config } from '@/config'
 import '@/styles/app.scss'
