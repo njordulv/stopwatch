@@ -9,8 +9,8 @@ export const LapList = () => {
   const reversedLaps = [...laps, count].reverse()
   const totalLaps = reversedLaps.length
   const lapsLength = laps.length
-  const minLap = totalLaps > 0 ? Math.min(...reversedLaps) : 0
-  const maxLap = totalLaps > 0 ? Math.max(...reversedLaps) : 0
+  const minLap = lapsLength > 0 ? Math.min(...laps) : 0
+  const maxLap = lapsLength > 0 ? Math.max(...laps) : 0
 
   return (
     <div className="laps">
@@ -29,7 +29,8 @@ export const LapList = () => {
                     lap,
                     totalLaps,
                     maxLap,
-                    minLap
+                    minLap,
+                    isCurrentLap
                   )}`}
                   exit={{
                     opacity: 0,
