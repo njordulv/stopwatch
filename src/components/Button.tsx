@@ -7,7 +7,12 @@ export const Button: React.FC<ButtonProps> = ({
   disabled,
 }) => {
   return (
-    <button onClick={onClick} className={className} disabled={disabled}>
+    <button
+      onClick={onClick}
+      className={className}
+      disabled={disabled}
+      aria-label={`Button ${text}`}
+    >
       {text}
     </button>
   )

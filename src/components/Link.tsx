@@ -18,6 +18,7 @@ export const Link: React.FC<LinkProps> = ({
       transition={transition}
       target={target}
       rel={rel}
+      aria-label="Njordulv's Github page"
     >
       <SiGithub size={22} />
     </motion.a>

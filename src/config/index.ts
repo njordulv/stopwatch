@@ -70,8 +70,9 @@ export const config = {
   transitionLink: {
     type: 'spring',
     mass: 0.6,
-    stiffness: 700,
-    damping: 50,
+    stiffness: 900,
+    damping: 30,
+    delay: 0.6,
   },
   lapsVariants: {
     initial: {
