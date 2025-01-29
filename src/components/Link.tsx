@@ -10,17 +10,20 @@ export const Link: React.FC<LinkProps> = ({
   rel,
 }) => {
   return (
-    <motion.a
+    <motion.div
       initial={{ opacity: 0, scale: 0, y: 40 }}
       animate={{ opacity: 1, scale: 1, y: 0 }}
       className={className}
-      href={href}
       transition={transition}
-      target={target}
-      rel={rel}
-      aria-label="Njordulv's Github page"
     >
-      <SiGithub size={22} />
-    </motion.a>
+      <a
+        href={href}
+        target={target}
+        rel={rel}
+        aria-label="Njordulv's Github page"
+      >
+        <SiGithub size={22} />
+      </a>
+    </motion.div>
   )
 }

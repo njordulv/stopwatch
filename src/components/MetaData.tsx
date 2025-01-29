@@ -24,24 +24,13 @@ export const MetaData: React.FC = () => {
       <meta name="twitter:title" content={config.title} />
       <meta name="twitter:description" content={config.description} />
       <meta name="twitter:image" content="/twitter-image.jpg" />
-      <link rel="manifest" href="/manifest.json" />
+      <meta name="theme-color" content="#010101" />
       <link
         rel="apple-touch-icon"
         sizes="180x180"
         href="/apple-touch-icon.png"
       />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="32x32"
-        href="/favicon-32x32.png"
-      />
-      <link
-        rel="icon"
-        type="image/png"
-        sizes="16x16"
-        href="/favicon-16x16.png"
-      />
+      <link rel="mask-icon" href="/mask-icon.svg" color="#010101" />
       <link rel="preconnect" href="https://fonts.googleapis.com" />
       <link
         rel="preconnect"
