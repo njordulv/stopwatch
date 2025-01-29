@@ -31,16 +31,6 @@ export const MetaData: React.FC = () => {
         href="/apple-touch-icon.png"
       />
       <link rel="mask-icon" href="/mask-icon.svg" color="#010101" />
-      <link rel="preconnect" href="https://fonts.googleapis.com" />
-      <link
-        rel="preconnect"
-        href="https://fonts.gstatic.com"
-        crossOrigin="anonymous"
-      />
-      <link
-        href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400&display=swap"
-        rel="stylesheet"
-      />
     </>
   )
 }

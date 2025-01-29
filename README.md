@@ -1,6 +1,6 @@
 # Stopwatch App
 
-A simple and elegant stopwatch application built with React and Vite. This application allows users to start, stop, and reset a stopwatch, displaying time in milliseconds for precise timing.
+A simple and elegant stopwatch application built with React and Vite. This application allows users to start, stop, and reset a stopwatch, displaying time in format "mm:ss:ms" for precise timing.
 
 ## Features
 
@@ -19,13 +19,14 @@ A simple and elegant stopwatch application built with React and Vite. This appli
   - **Worst Time**: Displayed in **red** to indicate the slowest lap.
 - **First-Class Lap Timing**: Each lap time is precisely recorded at the moment of pressing the lap button, ensuring accurate individual timings.
 - **Dynamic Lap List**: The lap list updates dynamically and is optimized for performance even with a large number of laps.
+- **Progressive Web App (PWA)**: The application now supports PWA features, allowing users to install it on their devices for offline access and enhanced performance.
 
 ## Technologies Used
 
 - **React**: A JavaScript library for building user interfaces.
 - **Vite**: A fast build tool that serves your code via native ESM.
 - **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
-- **Framer Motion**: A library for animations in React applications.
+- **Motion**: A library for animations in React applications.
 - **Zustand**: A modern state management library for improved state handling and performance.
 
 ## Installation
