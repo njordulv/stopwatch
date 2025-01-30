@@ -38,4 +38,13 @@ describe('Button FC', () => {
     await userEvent.click(screen.getByText('Click'))
     expect(handleClick).toHaveBeenCalledTimes(1)
   })
+
+  it('renders button with icon as children', () => {
+    render(
+      <Button onClick={() => {}}>
+        <span>Icon</span>
+      </Button>
+    )
+    expect(screen.getByText('Icon')).toBeInTheDocument()
+  })
 })

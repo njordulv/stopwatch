@@ -1,3 +1,5 @@
+import { ReactNode } from 'react'
+
 export interface CounterProps {
   count: number
 }
@@ -48,7 +50,7 @@ export interface NumeralProps {
 export interface ButtonProps {
   onClick: () => void
   className?: string
-  children: string
+  children: ReactNode
   disabled?: boolean
 }
 
