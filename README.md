@@ -23,8 +23,9 @@ A simple and elegant stopwatch application built with React and Vite. This appli
 
 ## Technologies Used
 
-- **React**: A JavaScript library for building user interfaces.
+- **React19**: A JavaScript library for building user interfaces.
 - **Vite**: A fast build tool that serves your code via native ESM.
+- **Vitest**: A library for testing React components.
 - **TypeScript**: A typed superset of JavaScript that compiles to plain JavaScript.
 - **Motion**: A library for animations in React applications.
 - **Zustand**: A modern state management library for improved state handling and performance.
