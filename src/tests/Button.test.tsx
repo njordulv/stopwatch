@@ -1,7 +1,12 @@
-import { render, screen } from '@testing-library/react'
-import userEvent from '@testing-library/user-event'
-import '@testing-library/jest-dom/vitest'
-import { describe, it, expect, vi } from 'vitest'
+import {
+  render,
+  screen,
+  userEvent,
+  describe,
+  it,
+  expect,
+  vi,
+} from '@/tests/utils'
 import { Button } from '@/components/Button'
 
 describe('Button FC', () => {
