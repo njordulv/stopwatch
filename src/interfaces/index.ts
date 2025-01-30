@@ -48,7 +48,7 @@ export interface NumeralProps {
 export interface ButtonProps {
   onClick: () => void
   className?: string
-  text: string
+  children: string
   disabled?: boolean
 }
 

@@ -3,7 +3,7 @@ import { ButtonProps } from '@/interfaces'
 export const Button: React.FC<ButtonProps> = ({
   onClick,
   className,
-  text,
+  children,
   disabled,
 }) => {
   return (
@@ -11,9 +11,9 @@ export const Button: React.FC<ButtonProps> = ({
       onClick={onClick}
       className={className}
       disabled={disabled}
-      aria-label={`Button ${text}`}
+      aria-label={`Button ${children}`}
     >
-      {text}
+      {children}
     </button>
   )
 }

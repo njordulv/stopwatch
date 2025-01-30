@@ -147,14 +147,14 @@ function App() {
         >
           <Button
             onClick={lap ? reset : toggleLap}
-            text={`${lap ? 'Reset' : 'Lap'}`}
             className="default"
+            children={`${lap ? 'Reset' : 'Lap'}`}
             disabled={count === 0}
           />
           <Button
             onClick={toggleTimer}
-            text={`${isRunning ? 'Stop' : 'Start'}`}
             className={`${isRunning ? 'danger' : 'primary'}`}
+            children={`${isRunning ? 'Stop' : 'Start'}`}
           />
         </motion.div>
         <LapList />

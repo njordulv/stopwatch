@@ -4,7 +4,6 @@ export const config = {
   description:
     'A precise and elegant stopwatch application for tracking time with millisecond accuracy.',
   generator: 'Next.js',
-  manifest: '/manifest.json',
   keywords: [
     'stopwatch',
     'timer',
@@ -69,9 +68,9 @@ export const config = {
   },
   transitionLink: {
     type: 'spring',
-    mass: 0.6,
-    stiffness: 900,
-    damping: 30,
+    mass: 0.8,
+    stiffness: 800,
+    damping: 25,
     delay: 0.6,
   },
   lapsVariants: {

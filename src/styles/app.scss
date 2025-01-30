@@ -10,9 +10,8 @@
   align-items: center;
   justify-content: center;
   place-items: center;
-  height: calc(100vh - 4rem);
-  padding: 2rem 0.625rem;
-  gap: 1.5rem;
+  height: calc(100vh - 2rem);
+  padding: 1rem 0.625rem;
 }
 
 .face {
@@ -146,14 +145,13 @@
   justify-content: space-between;
   width: 100%;
   gap: 1rem;
-  margin-top: -2.5rem;
 }
 
 .github-link {
   position: fixed;
   display: flex;
-  bottom: 7px;
-  right: 7px;
+  bottom: 12px;
+  right: 10px;
 }
 
 .laps {
@@ -161,7 +159,8 @@
   width: calc(100% + 0.625rem);
   overflow-y: scroll;
   height: 100%;
-  max-height: 13rem;
+  margin-top: 1rem;
+  max-height: 12.6rem;
 
   &__list {
     display: flex;
@@ -175,10 +174,10 @@
     padding: 0.5rem 0;
     margin-left: 0.625rem;
     margin-right: 0.625rem;
-    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   }
 
   &__item:last-child {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: none;
   }
 }
